@@ -10855,6 +10855,9 @@ article.article .content .message.message-immersive {
 article.article .content .message.message-immersive .message-body {
   border: none;
 }
+article.article .content strong {
+  color: #3273dc;
+}
 .rtl {
   direction: rtl;
 }
