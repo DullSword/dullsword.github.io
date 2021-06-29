@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>DullSword&#39;s Blog</title>
-  <icon>https://dullsword.github.io/icon.png</icon>
+  <icon>https://dullsword.github.io/themes/icon.png</icon>
   <subtitle>a day dreamer</subtitle>
   <link href="https://dullsword.github.io/atom.xml" rel="self"/>
   
