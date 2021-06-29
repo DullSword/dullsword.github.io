@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>DullSword&#39;s Blog</title>
+  <icon>https://dullsword.github.io/icon.png</icon>
+  <subtitle>a day dreamer</subtitle>
+  <link href="https://dullsword.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://dullsword.github.io/"/>
+  <updated>2021-06-29T16:04:53.234Z</updated>
+  <id>https://dullsword.github.io/</id>
+  
+  <author>
+    <name>DullSword</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Unity SerializeField和Serializable</title>
+    <link href="https://dullsword.github.io/2021/03/03/Unity-SerializeField%E5%92%8CSerializable/"/>
+    <id>https://dullsword.github.io/2021/03/03/Unity-SerializeField%E5%92%8CSerializable/</id>
+    <published>2021-03-03T07:49:50.000Z</published>
+    <updated>2021-06-29T16:04:53.234Z</updated>
+    
+    
+    <summary type="html"> </summary>
+    
+    
+    
+    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PM2与守护进程</title>
+    <link href="https://dullsword.github.io/2020/12/09/PM2%E4%B8%8E%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B/"/>
+    <id>https://dullsword.github.io/2020/12/09/PM2%E4%B8%8E%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B/</id>
+    <published>2020-12-09T08:48:11.000Z</published>
+    <updated>2021-06-28T20:34:41.858Z</updated>
+    
+    
+    <summary type="html">线上一直都是用pm2 启动服务，然而并不知道有什么用🤷，后来知道是守护进程的，那守护进程又是什么呢?</summary>
+    
+    
+    
+    <category term="Node.js" scheme="https://dullsword.github.io/categories/Node-js/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>GLaDOS 注册教程</title>
+    <link href="https://dullsword.github.io/2020/11/26/GLaDOS-%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/"/>
+    <id>https://dullsword.github.io/2020/11/26/GLaDOS-%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</id>
+    <published>2020-11-26T14:54:40.000Z</published>
+    <updated>2021-06-28T20:38:16.036Z</updated>
+    
+    
+    <summary type="html">我只用来🏄，到目前为止，感觉挺不错的，而且它有说对教育免费开放的，这一点让我觉得很良心，不过我并没享受到🍋。</summary>
+    
+    
+    
+    <category term="工具" scheme="https://dullsword.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="GLaDos" scheme="https://dullsword.github.io/tags/GLaDos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iView(View UI) Table行合并</title>
+    <link href="https://dullsword.github.io/2020/11/26/iView-View-UI-Table%E8%A1%8C%E5%90%88%E5%B9%B6/"/>
+    <id>https://dullsword.github.io/2020/11/26/iView-View-UI-Table%E8%A1%8C%E5%90%88%E5%B9%B6/</id>
+    <published>2020-11-26T04:04:15.000Z</published>
+    <updated>2021-06-28T17:56:56.554Z</updated>
+    
+    
+    <summary type="html">设置属性 `span-method` 可以指定合并行或列的算法。</summary>
+    
+    
+    
+    <category term="Vue" scheme="https://dullsword.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Github Actions GLaDOS自动签到</title>
+    <link href="https://dullsword.github.io/2020/11/20/Github-Actions-GLaDOS%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/"/>
+    <id>https://dullsword.github.io/2020/11/20/Github-Actions-GLaDOS%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/</id>
+    <published>2020-11-20T09:25:43.000Z</published>
+    <updated>2021-06-28T20:38:32.101Z</updated>
+    
+    
+    <summary type="html"> </summary>
+    
+    
+    
+    <category term="工具" scheme="https://dullsword.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="GLaDos" scheme="https://dullsword.github.io/tags/GLaDos/"/>
+    
+    <category term="Github Actions" scheme="https://dullsword.github.io/tags/Github-Actions/"/>
+    
+    <category term="Autocheck" scheme="https://dullsword.github.io/tags/Autocheck/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity SRDebugger</title>
+    <link href="https://dullsword.github.io/2020/11/17/Unity-SRDebugger/"/>
+    <id>https://dullsword.github.io/2020/11/17/Unity-SRDebugger/</id>
+    <published>2020-11-17T07:29:30.000Z</published>
+    <updated>2021-06-29T15:59:26.295Z</updated>
+    
+    
+    <summary type="html">本章要来介绍这款超好用的插件『SRDebugger』。插件支援Real-time Console，运作游戏时如果出现Bug，或是程式撰写的Debug.Log，都会出现在Console画面。另外，还有Options Tab的功能，类似游戏作弊用控制台，可以撰写类似『无限血量』、『自动跳关』等方便测试的功能，亦能输出一些重要的讯息。</summary>
+    
+    
+    
+    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JS 数组打乱 Fisher–Yates shuffle(费舍尔-耶茨 洗牌)</title>
+    <link href="https://dullsword.github.io/2020/11/12/JS-%E6%95%B0%E7%BB%84%E6%89%93%E4%B9%B1-Fisher%E2%80%93Yates-shuffle-%E8%B4%B9%E8%88%8D%E5%B0%94-%E8%80%B6%E8%8C%A8-%E6%B4%97%E7%89%8C/"/>
+    <id>https://dullsword.github.io/2020/11/12/JS-%E6%95%B0%E7%BB%84%E6%89%93%E4%B9%B1-Fisher%E2%80%93Yates-shuffle-%E8%B4%B9%E8%88%8D%E5%B0%94-%E8%80%B6%E8%8C%A8-%E6%B4%97%E7%89%8C/</id>
+    <published>2020-11-12T10:23:32.000Z</published>
+    <updated>2021-06-28T20:34:16.510Z</updated>
+    
+    
+    <summary type="html"> </summary>
+    
+    
+    
+    <category term="Javascript" scheme="https://dullsword.github.io/categories/Javascript/"/>
+    
+    
+    <category term="Javascript数组" scheme="https://dullsword.github.io/tags/Javascript%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unity 协程（Coroutine）</title>
+    <link href="https://dullsword.github.io/2020/11/02/Unity-%E5%8D%8F%E7%A8%8B%EF%BC%88Coroutine%EF%BC%89/"/>
+    <id>https://dullsword.github.io/2020/11/02/Unity-%E5%8D%8F%E7%A8%8B%EF%BC%88Coroutine%EF%BC%89/</id>
+    <published>2020-11-02T07:41:19.000Z</published>
+    <updated>2021-06-28T20:34:59.490Z</updated>
+    
+    
+    <summary type="html"> </summary>
+    
+    
+    
+    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Unity 耳切法代码实现</title>
+    <link href="https://dullsword.github.io/2020/09/30/Unity-%E8%80%B3%E5%88%87%E6%B3%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://dullsword.github.io/2020/09/30/Unity-%E8%80%B3%E5%88%87%E6%B3%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/</id>
+    <published>2020-09-30T07:34:26.000Z</published>
+    <updated>2021-06-28T20:34:53.109Z</updated>
+    
+    
+    <summary type="html"> </summary>
+    
+    
+    
+    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Unity 选择具有不同概率的项</title>
+    <link href="https://dullsword.github.io/2020/08/31/Unity-%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E4%B8%8D%E5%90%8C%E6%A6%82%E7%8E%87%E7%9A%84%E9%A1%B9/"/>
+    <id>https://dullsword.github.io/2020/08/31/Unity-%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E4%B8%8D%E5%90%8C%E6%A6%82%E7%8E%87%E7%9A%84%E9%A1%B9/</id>
+    <published>2020-08-31T10:10:47.000Z</published>
+    <updated>2021-06-28T20:35:02.343Z</updated>
+    
+    
+    <summary type="html">有时需要随机选择项，但有些项比其他项被选中的几率更高。</summary>
+    
+    
+    
+    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Unity Inspector ReorderableList</title>
+    <link href="https://dullsword.github.io/2020/06/24/Unity-Inspector-ReorderableList/"/>
+    <id>https://dullsword.github.io/2020/06/24/Unity-Inspector-ReorderableList/</id>
+    <published>2020-06-24T10:24:53.000Z</published>
+    <updated>2021-06-28T20:35:05.126Z</updated>
+    
+    
+    <summary type="html"> </summary>
+    
+    
+    
+    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>阿里云 更换证书</title>
+    <link href="https://dullsword.github.io/2020/06/18/%E9%98%BF%E9%87%8C%E4%BA%91-%E6%9B%B4%E6%8D%A2%E8%AF%81%E4%B9%A6/"/>
+    <id>https://dullsword.github.io/2020/06/18/%E9%98%BF%E9%87%8C%E4%BA%91-%E6%9B%B4%E6%8D%A2%E8%AF%81%E4%B9%A6/</id>
+    <published>2020-06-18T04:10:14.000Z</published>
+    <updated>2021-06-28T11:53:25.909Z</updated>
+    
+    
+    <summary type="html"> </summary>
+    
+    
+    
+    <category term="其他" scheme="https://dullsword.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Unity UICountUp脚本</title>
+    <link href="https://dullsword.github.io/2020/05/13/Unity-UICountUp%E8%84%9A%E6%9C%AC/"/>
+    <id>https://dullsword.github.io/2020/05/13/Unity-UICountUp%E8%84%9A%E6%9C%AC/</id>
+    <published>2020-05-13T10:52:20.000Z</published>
+    <updated>2021-06-28T20:35:18.142Z</updated>
+    
+    
+    <summary type="html"> </summary>
+    
+    
+    
+    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Unity 射线检测</title>
+    <link href="https://dullsword.github.io/2020/05/13/Unity-%E5%B0%84%E7%BA%BF%E6%A3%80%E6%B5%8B/"/>
+    <id>https://dullsword.github.io/2020/05/13/Unity-%E5%B0%84%E7%BA%BF%E6%A3%80%E6%B5%8B/</id>
+    <published>2020-05-13T02:27:56.000Z</published>
+    <updated>2021-06-28T20:34:56.939Z</updated>
+    
+    
+    <summary type="html">本文简要分析了Unity中各类 射线检测 的基本原理及用法，及不同检测手段的性能对比。</summary>
+    
+    
+    
+    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Unity UI进入脚本</title>
+    <link href="https://dullsword.github.io/2020/05/12/Unity-UI%E8%BF%9B%E5%85%A5%E8%84%9A%E6%9C%AC/"/>
+    <id>https://dullsword.github.io/2020/05/12/Unity-UI%E8%BF%9B%E5%85%A5%E8%84%9A%E6%9C%AC/</id>
+    <published>2020-05-12T03:10:42.000Z</published>
+    <updated>2021-06-28T20:35:15.269Z</updated>
+    
+    
+    <summary type="html"> </summary>
+    
+    
+    
+    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C# 抽象函数和虚函数有什么区别？</title>
+    <link href="https://dullsword.github.io/2020/01/03/C-%E6%8A%BD%E8%B1%A1%E5%87%BD%E6%95%B0%E5%92%8C%E8%99%9A%E5%87%BD%E6%95%B0%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F/"/>
+    <id>https://dullsword.github.io/2020/01/03/C-%E6%8A%BD%E8%B1%A1%E5%87%BD%E6%95%B0%E5%92%8C%E8%99%9A%E5%87%BD%E6%95%B0%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F/</id>
+    <published>2020-01-03T09:34:35.000Z</published>
+    <updated>2021-06-28T11:54:39.917Z</updated>
+    
+    
+    <summary type="html"> </summary>
+    
+    
+    
+    <category term="C#" scheme="https://dullsword.github.io/categories/C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C# 方法隐藏(new)和重写(override)方法</title>
+    <link href="https://dullsword.github.io/2020/01/03/C-%E6%96%B9%E6%B3%95%E9%9A%90%E8%97%8F-new-%E5%92%8C%E9%87%8D%E5%86%99-override-%E6%96%B9%E6%B3%95/"/>
+    <id>https://dullsword.github.io/2020/01/03/C-%E6%96%B9%E6%B3%95%E9%9A%90%E8%97%8F-new-%E5%92%8C%E9%87%8D%E5%86%99-override-%E6%96%B9%E6%B3%95/</id>
+    <published>2020-01-03T09:07:14.000Z</published>
+    <updated>2021-06-28T17:56:25.103Z</updated>
+    
+    
+    <summary type="html">方法隐藏相当于在子类中定义新方法，而方法重写则是重新定义父类中方法的内容。</summary>
+    
+    
+    
+    <category term="C#" scheme="https://dullsword.github.io/categories/C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx 基本入门</title>
+    <link href="https://dullsword.github.io/2019/10/31/Nginx-%E5%9F%BA%E6%9C%AC%E5%85%A5%E9%97%A8/"/>
+    <id>https://dullsword.github.io/2019/10/31/Nginx-%E5%9F%BA%E6%9C%AC%E5%85%A5%E9%97%A8/</id>
+    <published>2019-10-31T07:04:19.000Z</published>
+    <updated>2021-06-28T20:34:35.266Z</updated>
+    
+    
+    <summary type="html"> </summary>
+    
+    
+    
+    <category term="Nginx" scheme="https://dullsword.github.io/categories/Nginx/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序 自制模态框</title>
+    <link href="https://dullsword.github.io/2019/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%87%AA%E5%88%B6%E6%A8%A1%E6%80%81%E6%A1%86/"/>
+    <id>https://dullsword.github.io/2019/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%87%AA%E5%88%B6%E6%A8%A1%E6%80%81%E6%A1%86/</id>
+    <published>2019-07-24T08:28:51.000Z</published>
+    <updated>2021-06-28T17:56:10.611Z</updated>
+    
+    
+    <summary type="html">这只是一个简单的例子，主要是`wxml`和`wxss`部分，至于显示和隐藏，根据自己需求来写。</summary>
+    
+    
+    
+    <category term="微信小程序" scheme="https://dullsword.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序 下载图片或视频保存到手机系统相册</title>
+    <link href="https://dullsword.github.io/2019/06/06/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87%E6%88%96%E8%A7%86%E9%A2%91%E4%BF%9D%E5%AD%98%E5%88%B0%E6%89%8B%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%86%8C/"/>
+    <id>https://dullsword.github.io/2019/06/06/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87%E6%88%96%E8%A7%86%E9%A2%91%E4%BF%9D%E5%AD%98%E5%88%B0%E6%89%8B%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%86%8C/</id>
+    <published>2019-06-06T09:45:42.000Z</published>
+    <updated>2021-06-27T22:52:40.077Z</updated>
+    
+    
+    <summary type="html"> </summary>
+    
+    
+    
+    <category term="微信小程序" scheme="https://dullsword.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+  </entry>
+  
+</feed>
