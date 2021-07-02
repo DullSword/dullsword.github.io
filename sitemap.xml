@@ -4,7 +4,28 @@
   <url>
     <loc>https://dullsword.github.io/2020/11/26/GLaDOS-%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</loc>
     
-    <lastmod>2021-07-01</lastmod>
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://dullsword.github.io/2018/08/01/JS-undefined%E4%B8%8Enull%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://dullsword.github.io/2018/09/26/JS-require%E8%84%9A%E6%9C%AC%E8%B7%AF%E5%BE%84/</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://dullsword.github.io/2018/10/31/JS-obeject-key%E4%B8%8Eobject-key-%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    
+    <lastmod>2021-07-02</lastmod>
     
   </url>
   
@@ -86,13 +107,6 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/2018/08/01/undefined%E4%B8%8Enull%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
-    
-    <lastmod>2021-06-28</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://dullsword.github.io/2019/02/19/ThinkJS-Service-%E5%88%A0%E9%99%A4%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%96%87%E4%BB%B6/</loc>
     
     <lastmod>2021-06-28</lastmod>
@@ -100,21 +114,7 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/2018/09/26/require%E8%84%9A%E6%9C%AC%E8%B7%AF%E5%BE%84/</loc>
-    
-    <lastmod>2021-06-28</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://dullsword.github.io/2020/12/09/PM2%E4%B8%8E%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B/</loc>
-    
-    <lastmod>2021-06-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dullsword.github.io/2018/10/31/obeject-key%E4%B8%8Eobject-key-%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     
     <lastmod>2021-06-28</lastmod>
     
@@ -480,14 +480,14 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
+    <loc>https://dullsword.github.io/tags/Javascript%E5%AF%B9%E8%B1%A1/</loc>
     <lastmod>2021-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/tags/Javascript%E5%AF%B9%E8%B1%A1/</loc>
+    <loc>https://dullsword.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2021-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -93,7 +93,8 @@
                 $(this).attr('id', id);
                 $(this).find('figcaption div.level-right').append(button);
             });
-            new ClipboardJS('.highlight .copy'); // eslint-disable-line no-new
+            // new ClipboardJS('.highlight .copy'); // eslint-disable-line no-new
+            new ClipboardJS('.copy');
         }
 
         if (fold) {
