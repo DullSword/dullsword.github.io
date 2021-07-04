@@ -30,7 +30,7 @@
     
     
     
-    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    <category term="Unity" scheme="https://dullsword.github.io/categories/unity/"/>
     
     
   </entry>
@@ -49,7 +49,7 @@
     
     
     
-    <category term="Node.js" scheme="https://dullsword.github.io/categories/Node-js/"/>
+    <category term="Node.js" scheme="https://dullsword.github.io/categories/node-js/"/>
     
     
   </entry>
@@ -71,7 +71,7 @@
     <category term="工具" scheme="https://dullsword.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="GLaDos" scheme="https://dullsword.github.io/tags/GLaDos/"/>
+    <category term="GLaDos" scheme="https://dullsword.github.io/tags/glados/"/>
     
   </entry>
   
@@ -89,7 +89,7 @@
     
     
     
-    <category term="Vue" scheme="https://dullsword.github.io/categories/Vue/"/>
+    <category term="Vue" scheme="https://dullsword.github.io/categories/vue/"/>
     
     
   </entry>
@@ -111,11 +111,11 @@
     <category term="工具" scheme="https://dullsword.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="GLaDos" scheme="https://dullsword.github.io/tags/GLaDos/"/>
+    <category term="Github Actions" scheme="https://dullsword.github.io/tags/github-actions/"/>
     
-    <category term="Github Actions" scheme="https://dullsword.github.io/tags/Github-Actions/"/>
+    <category term="GLaDos" scheme="https://dullsword.github.io/tags/glados/"/>
     
-    <category term="Autocheck" scheme="https://dullsword.github.io/tags/Autocheck/"/>
+    <category term="Autocheck" scheme="https://dullsword.github.io/tags/autocheck/"/>
     
   </entry>
   
@@ -133,7 +133,7 @@
     
     
     
-    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    <category term="Unity" scheme="https://dullsword.github.io/categories/unity/"/>
     
     
   </entry>
@@ -152,10 +152,10 @@
     
     
     
-    <category term="Javascript" scheme="https://dullsword.github.io/categories/Javascript/"/>
+    <category term="Javascript" scheme="https://dullsword.github.io/categories/javascript/"/>
     
     
-    <category term="Javascript数组" scheme="https://dullsword.github.io/tags/Javascript%E6%95%B0%E7%BB%84/"/>
+    <category term="Javascript数组" scheme="https://dullsword.github.io/tags/javascript%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -173,7 +173,7 @@
     
     
     
-    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    <category term="Unity" scheme="https://dullsword.github.io/categories/unity/"/>
     
     
   </entry>
@@ -192,7 +192,7 @@
     
     
     
-    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    <category term="Unity" scheme="https://dullsword.github.io/categories/unity/"/>
     
     
   </entry>
@@ -211,7 +211,7 @@
     
     
     
-    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    <category term="Unity" scheme="https://dullsword.github.io/categories/unity/"/>
     
     
   </entry>
@@ -230,7 +230,7 @@
     
     
     
-    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    <category term="Unity" scheme="https://dullsword.github.io/categories/unity/"/>
     
     
   </entry>
@@ -268,7 +268,7 @@
     
     
     
-    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    <category term="Unity" scheme="https://dullsword.github.io/categories/unity/"/>
     
     
   </entry>
@@ -287,7 +287,7 @@
     
     
     
-    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    <category term="Unity" scheme="https://dullsword.github.io/categories/unity/"/>
     
     
   </entry>
@@ -306,7 +306,7 @@
     
     
     
-    <category term="Unity" scheme="https://dullsword.github.io/categories/Unity/"/>
+    <category term="Unity" scheme="https://dullsword.github.io/categories/unity/"/>
     
     
   </entry>
@@ -325,7 +325,7 @@
     
     
     
-    <category term="C#" scheme="https://dullsword.github.io/categories/C/"/>
+    <category term="C#" scheme="https://dullsword.github.io/categories/c/"/>
     
     
   </entry>
@@ -344,7 +344,7 @@
     
     
     
-    <category term="C#" scheme="https://dullsword.github.io/categories/C/"/>
+    <category term="C#" scheme="https://dullsword.github.io/categories/c/"/>
     
     
   </entry>
@@ -363,7 +363,7 @@
     
     
     
-    <category term="Nginx" scheme="https://dullsword.github.io/categories/Nginx/"/>
+    <category term="Nginx" scheme="https://dullsword.github.io/categories/nginx/"/>
     
     
   </entry>
