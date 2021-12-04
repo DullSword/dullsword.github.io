@@ -515,7 +515,7 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/tags/Javascript%E5%AF%B9%E8%B1%A1/</loc>
+    <loc>https://dullsword.github.io/tags/HTTP/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -529,7 +529,7 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/tags/HTTP/</loc>
+    <loc>https://dullsword.github.io/tags/Javascript%E5%AF%B9%E8%B1%A1/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -622,14 +622,14 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/Javascript/</loc>
+    <loc>https://dullsword.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
+    <loc>https://dullsword.github.io/categories/Javascript/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -650,14 +650,14 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/Node-js/</loc>
+    <loc>https://dullsword.github.io/categories/ThinkJS/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/ThinkJS/</loc>
+    <loc>https://dullsword.github.io/categories/Node-js/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -685,14 +685,14 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <loc>https://dullsword.github.io/categories/%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF/</loc>
+    <loc>https://dullsword.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
