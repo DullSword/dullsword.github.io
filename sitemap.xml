@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dullsword.github.io/game/index.html</loc>
+    
+    <lastmod>2021-12-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://dullsword.github.io/2021/12/14/CPP-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2021-12-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://dullsword.github.io/2021/12/13/UE4-%E7%AE%80%E5%8D%95%E8%84%9A%E9%83%A8IK-CPP%E5%AE%9E%E7%8E%B0/</loc>
     
     <lastmod>2021-12-17</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://dullsword.github.io/2021/08/27/UE4-%E5%B0%84%E7%BA%BF%E6%A3%80%E6%B5%8B/</loc>
     
     <lastmod>2021-12-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dullsword.github.io/2021/12/14/CPP-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    
-    <lastmod>2021-12-14</lastmod>
     
   </url>
   
@@ -508,7 +515,7 @@
 
   <url>
     <loc>https://dullsword.github.io/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -516,105 +523,105 @@
   
   <url>
     <loc>https://dullsword.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/Cocos-Creator/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/GLaDos/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/Github-Actions/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/Autocheck/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/HTTP/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/Javascript%E5%AF%B9%E8%B1%A1/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/Javascript%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/Javascript%E6%95%B0%E7%BB%84/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/ThinkJS/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/Node-js/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/%E9%98%BF%E9%87%8C%E4%BA%91/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/tags/%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -623,119 +630,119 @@
   
   <url>
     <loc>https://dullsword.github.io/categories/CPP/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/CSharp/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/Cocos-Creator/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/HTML5/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/Javascript/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2021-12-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dullsword.github.io/categories/Node-js/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/Nginx/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dullsword.github.io/categories/Node-js/</loc>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/ThinkJS/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/UE4/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/Unity/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/Vue/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dullsword.github.io/categories/%E5%85%B6%E4%BB%96/</loc>
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
