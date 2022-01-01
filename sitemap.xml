@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://dullsword.github.io/2021/12/14/CPP-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://dullsword.github.io/2021/12/26/UE4-UPROPERTY%E4%B8%8E%E5%8F%8D%E5%B0%84%E3%80%81%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/</loc>
     
     <lastmod>2022-01-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/2021/12/26/UE4-UPROPERTY%E4%B8%8E%E5%8F%8D%E5%B0%84%E3%80%81%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/</loc>
+    <loc>https://dullsword.github.io/2021/12/14/CPP-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     
-    <lastmod>2021-12-29</lastmod>
+    <lastmod>2022-01-01</lastmod>
     
   </url>
   
@@ -657,13 +657,6 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2022-01-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dullsword.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-01-01</lastmod>
     <changefreq>daily</changefreq>
@@ -686,6 +679,13 @@
   
   <url>
     <loc>https://dullsword.github.io/categories/Javascript/</loc>
+    <lastmod>2022-01-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dullsword.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2022-01-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
