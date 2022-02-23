@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://dullsword.github.io/game/index.html</loc>
-    
-    <lastmod>2022-02-23</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://dullsword.github.io/IWantMedals/index.html</loc>
     
     <lastmod>2022-02-23</lastmod>
@@ -16,7 +9,7 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/IWantMedals/src/settings.088f1.json</loc>
+    <loc>https://dullsword.github.io/IWantMedals/src/settings.7d838.json</loc>
     
     <lastmod>2022-02-23</lastmod>
     
@@ -59,6 +52,20 @@
   
   <url>
     <loc>https://dullsword.github.io/IWantMedals/assets/main/import/08/08db70676.6c275.json</loc>
+    
+    <lastmod>2022-02-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://dullsword.github.io/game/index.html</loc>
+    
+    <lastmod>2022-02-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://dullsword.github.io/IWantMedals/src/settings.088f1.json</loc>
     
     <lastmod>2022-02-23</lastmod>
     
@@ -641,14 +648,14 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/</loc>
+    <loc>https://dullsword.github.io/tags/Javascript%E5%AF%B9%E8%B1%A1/</loc>
     <lastmod>2022-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/tags/Javascript%E5%AF%B9%E8%B1%A1/</loc>
+    <loc>https://dullsword.github.io/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/</loc>
     <lastmod>2022-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -762,14 +769,14 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/Node-js/</loc>
+    <loc>https://dullsword.github.io/categories/Nginx/</loc>
     <lastmod>2022-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/Nginx/</loc>
+    <loc>https://dullsword.github.io/categories/Node-js/</loc>
     <lastmod>2022-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
