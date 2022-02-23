@@ -2,70 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://dullsword.github.io/IWantMedals/index.html</loc>
-    
-    <lastmod>2022-02-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dullsword.github.io/IWantMedals/src/settings.7d838.json</loc>
-    
-    <lastmod>2022-02-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dullsword.github.io/IWantMedals/assets/main/config.d5cad.json</loc>
-    
-    <lastmod>2022-02-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dullsword.github.io/IWantMedals/src/import-map.187bb.json</loc>
-    
-    <lastmod>2022-02-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dullsword.github.io/IWantMedals/assets/main/import/fd/fd8ec536-a354-4a17-9c74-4f3883c378c8.731f4.json</loc>
-    
-    <lastmod>2022-02-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dullsword.github.io/IWantMedals/assets/main/import/0a/0a2eb2581.200b3.json</loc>
-    
-    <lastmod>2022-02-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dullsword.github.io/IWantMedals/assets/main/import/02/023967b24.be842.json</loc>
-    
-    <lastmod>2022-02-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dullsword.github.io/IWantMedals/assets/main/import/08/08db70676.6c275.json</loc>
-    
-    <lastmod>2022-02-23</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://dullsword.github.io/game/index.html</loc>
-    
-    <lastmod>2022-02-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dullsword.github.io/IWantMedals/src/settings.088f1.json</loc>
     
     <lastmod>2022-02-23</lastmod>
     
@@ -648,14 +585,14 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/tags/Javascript%E5%AF%B9%E8%B1%A1/</loc>
+    <loc>https://dullsword.github.io/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/</loc>
     <lastmod>2022-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/</loc>
+    <loc>https://dullsword.github.io/tags/Javascript%E5%AF%B9%E8%B1%A1/</loc>
     <lastmod>2022-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
