@@ -578,14 +578,14 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/tags/HTTP/</loc>
+    <loc>https://dullsword.github.io/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/</loc>
     <lastmod>2022-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/</loc>
+    <loc>https://dullsword.github.io/tags/HTTP/</loc>
     <lastmod>2022-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -685,14 +685,14 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
+    <loc>https://dullsword.github.io/categories/Javascript/</loc>
     <lastmod>2022-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/Javascript/</loc>
+    <loc>https://dullsword.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2022-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -720,14 +720,14 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/ThinkJS/</loc>
+    <loc>https://dullsword.github.io/categories/UE4/</loc>
     <lastmod>2022-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/UE4/</loc>
+    <loc>https://dullsword.github.io/categories/ThinkJS/</loc>
     <lastmod>2022-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
