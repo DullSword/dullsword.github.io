@@ -557,14 +557,14 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/tags/GLaDos/</loc>
+    <loc>https://dullsword.github.io/tags/Github-Actions/</loc>
     <lastmod>2022-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/tags/Github-Actions/</loc>
+    <loc>https://dullsword.github.io/tags/GLaDos/</loc>
     <lastmod>2022-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -678,6 +678,13 @@
   </url>
   
   <url>
+    <loc>https://dullsword.github.io/categories/HTML5/</loc>
+    <lastmod>2022-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dullsword.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2022-03-02</lastmod>
     <changefreq>daily</changefreq>
@@ -699,7 +706,7 @@
   </url>
   
   <url>
-    <loc>https://dullsword.github.io/categories/HTML5/</loc>
+    <loc>https://dullsword.github.io/categories/Node-js/</loc>
     <lastmod>2022-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -707,13 +714,6 @@
   
   <url>
     <loc>https://dullsword.github.io/categories/Nginx/</loc>
-    <lastmod>2022-03-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dullsword.github.io/categories/Node-js/</loc>
     <lastmod>2022-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
