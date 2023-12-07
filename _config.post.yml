@@ -1,0 +1,16 @@
+widgets:
+    -
+        type: toc
+        position: left
+        index: false
+        collapsed: true
+        depth: 3
+    -
+        type: recommended_posts
+        position: left
+    -
+        type: categories
+        position: left
+    -
+        type: tags
+        position: left

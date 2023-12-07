@@ -1,0 +1,23 @@
+widgets:
+    -
+        position: left
+        type: profile
+        author: DullSword
+        author_title: Daydreamer
+        location: Quanzhou, China
+        avatar: /img/avatar.jpg
+        avatar_rounded: true
+        gravatar: 525649253@qq.com
+        hitokoto: ['k']
+    -
+        type: toc
+        position: left
+        index: false
+        collapsed: true
+        depth: 3
+    -
+        type: categories
+        position: left
+    -
+        type: tags
+        position: left
