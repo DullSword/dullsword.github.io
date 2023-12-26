@@ -50,6 +50,22 @@ tags:
     ```
 
   - 如果只单独使用 ChordAction 触发器，一旦触发，后续将输入值慢慢调整为0（例如轻推手柄摇杆），也仍然会继续触发。
+
+    ![IMC_Test](IMC_Test.png)
+    ![IA_Test0](IA_Test0.png)
+    {% tabs style:boxed %}
+    <!-- tab id:ChordActionInCorrect "icon:fa-solid fa-book" title:错误用法 active -->
+    单独使用 ChordAction 触发器
+
+    ![IA_Test1_Incorrect](2023/11/06/UE5-增强输入-Trigger与Modifier/IA_Test1_Incorrect.png)
+    <!-- endtab -->
+    <!-- tab id:ChordActionCorrect "icon:fa-solid fa-user" title:正确用法 -->
+    同时使用其他触发器来控制该动作除了前置条件（ChordAction）以外自身的触发条件
+
+    ![IA_Test1_Correct](2023/11/06/UE5-增强输入-Trigger与Modifier/IA_Test1_Correct.png)
+    <!-- endtab -->
+    ...
+    {% endtabs %}
 - **Combo** ：取消 Combo 的输入动作未触发 + Combo 按顺序输入 + 当前输入动作的输入时间小于对应的 `TimeToPressKey` + 已完成 Combo 中的所有输入动作 -> 触发1次
   - 不会检查第一个输入动作的 `TimeToPressKey`
 
