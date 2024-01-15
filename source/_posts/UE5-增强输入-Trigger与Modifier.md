@@ -159,7 +159,7 @@ tags:
 - **Smooth** ：
   >在多个帧上平滑输入
 
-## 相关
+## 参考
 
 - [增强输入 - 虚幻引擎文档](https://docs.unrealengine.com/5.1/zh-CN/enhanced-input-in-unreal-engine/)
 - [[中文直播]第39期 | 虎跳龙拿--新一代增强输入框架EnhancedInput | Epic 大钊](https://www.bilibili.com/video/BV14r4y1r7nz/?spm_id_from=333.880.my_history.page.click&vd_source=58b361f2927e97f2b7ccd1221fc04ea7)
