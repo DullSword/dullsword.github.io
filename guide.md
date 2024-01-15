@@ -1,6 +1,6 @@
-# 图片名字全小写，单词之间用下划线隔开，一般不需要添加说明
+# 图片名字全小写，单词之间用下划线隔开
 
-![](free_software_licenses-0.png)
+![free_software_licenses](free_software_licenses.png)
 
 # 缩写或专有名词保留大写
 
@@ -12,14 +12,16 @@
 
 # 原文 使用link
 
-{% raw %}<article class="message is-link"><div class="message-body">{% endraw %}
+https://ppoffice.github.io/hexo-theme-icarus/uncategorized/%E8%87%AA%E5%AE%9A%E4%B9%89hexo%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6/#tab_title_boxed_1
+
+{% message color:primary %}
 作者： 淼淼真人
 原文标题： 浅析javascript调用栈
 链接： https://segmentfault.com/a/1190000010360316
 来源： SegmentFault 思否
 转载篇幅： 全文
 是否修改： 否
-{% raw %}</div></article>{% endraw %}
+{% endmessage %}
 
 # 参考 放文末
 
@@ -27,9 +29,11 @@
 
 # 相关信息或前提条件 使用info
 
-{% raw %}<article class="message is-info"><div class="message-body">{% endraw %}
+https://ppoffice.github.io/hexo-theme-icarus/uncategorized/%E8%87%AA%E5%AE%9A%E4%B9%89hexo%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6/#tab_title_boxed_1
+
+{% message color:info %}
 最小值n，最大值m
-{% raw %}</div></article>{% endraw %}
+{% endmessage %}
 
 # 图片来源
 
@@ -44,45 +48,38 @@
 
 # 分类标签 首字母大写 单词之间空格隔开 尽量使用中文，别装逼，等等看不懂，除了一些不好翻译过来的
 
-# 使用英文引号
+# 使用中文引号，最后显示效果中英文引号是一致的
 
 # 标签页
 
-<div class="tabs is-boxed"><ul>
-<li class="is-active"><a onclick="onTabClick(event)">
-<span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
-<span>原文</span>
-</a></li>
-<li><a onclick="onTabClick(event)">
-<span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
-<span>个人理解</span>
-</a></li>
-</ul></div>
+https://ppoffice.github.io/hexo-theme-icarus/uncategorized/%E8%87%AA%E5%AE%9A%E4%B9%89hexo%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6/#tab_title_boxed_1
 
-{% raw %}<div id="原文" class="tab-content" style="display: block;">{% endraw %}
+{% tabs style:boxed %}
+<!-- tab id:original "icon:fa-solid fa-book" title:原文 active -->
 （1）先运行绑定事件函数，把`onClick`事件绑定在`button`标签上。该函数没有没有调用其他函数。
-{% raw %}</div>{% endraw %}
 
-{% raw %}<div id="个人理解" class="tab-content">{% endraw %}
+（2）接下来运行`console.log("hi")`,该函数没有调用任何其他函数。
+
+（3）然后继续执行下面的`setTimeout`，`setTimeout`是一个异步函数，经过5秒之后，在运行队列里面插入这个回调函数，然后如果该队列之前没有其他函数，就执行该队列，有则等待前面的函数执行完成，再执行。
+
+（4）`console.log("My Name Is Chirs")`不会等待5s之后，再执行，因为`settimeout`并不会在调用栈中执行5秒，实际上它在调用栈中是立即执行完的。
+
+（5）假设在这个时候，我们点击了按钮，按钮绑定的回调事件被添加到运行队列中。（运行队列中的代码要等调用栈被清空之后才会执行）由于调用栈中还有代码需要执行，所以会继续执行下面的`console.log()`
+
+（6）然后执行完`console.log`之后，由于时间还没有经过5s,所以点击的回调事件会被先压入栈中去执行，由于该回调事件里面又是一个`settimeout`事件，由于它的事件间隔只有0s，所以这个`settimeout`的回调会先被压入运行队列。先输出"`You clicked the button!`" 再过几秒之后，间隔为5s的`settimeout`把回调函数压入队列，这时候调用栈中没有代码在执行，所以会执行这个代码，输出"`Click the button`"。结束代码运行。
+<!-- endtab -->
+<!-- tab id:personal "icon:fa-solid fa-user" title:个人理解 -->
 （1）运行`console.log("hi")`，该函数没有调用任何其他函数。
-{% raw %}</div>{% endraw %}
 
----
+（2）然后继续执行下面的`setTimeout`，`setTimeout`是一个异步函数，经过5秒之后，在运行队列里面插入这个回调函数，然后如果该队列之前没有其他函数，就执行该队列，有则等待前面的函数执行完成，再执行。
 
-<style type="text/css">
-.content .tabs ul { margin: 0; }
-.tab-content { display: none; margin-bottom: 1rem }
-</style>
+（3）`console.log("My Name Is Chirs")`不会等待5s之后，再执行，因为`settimeout`并不会在调用栈中执行5秒，实际上它在调用栈中是立即执行完的。
 
-<script>
-function onTabClick (event) {
-    var tabTitle = $(event.currentTarget).children('span:last-child').text();
-    $('.article .content .tab-content').css('display', 'none');
-    $('.article .content .tabs li').removeClass('is-active');
-    $('#' + tabTitle).css('display', 'block');
-    $(event.currentTarget).parent().addClass('is-active');
-}
-</script>
+（4）假设在要`console.log("My Name Is Chirs")`时，我们点击了按钮，按钮绑定的回调事件被添加到运行队列中。（运行队列中的代码要等调用栈被清空之后才会执行）由于调用栈中还有代码需要执行，所以会继续执行下面的`console.log("My Name Is Chirs")`。
+
+（5）然后执行完`console.log("My Name Is Chirs")`之后，由于时间还没有经过5s,所以点击按钮的回调事件会被先压入栈中去执行，由于该回调事件里面又是一个`settimeout`事件，由于它的事件间隔只有0s，所以这个`settimeout`的回调会先被压入运行队列。先输出"`You clicked the button!`"，然后5s间隔到了的`settimeout`把回调函数压入队列，这时候调用栈中没有代码在执行，所以会执行这个代码，输出"`Click the button`"。结束代码运行。
+<!-- endtab -->
+{% endtabs %}
 
 # 参数说明+使用+效果+代码
 
@@ -100,7 +97,7 @@ function onTabClick (event) {
 {% endraw %}
 **iMaeGoo** 出自独立游戏 [World of Goo](https://store.steampowered.com/app/22000/) 里小粘球的叫声，读作 /ɪ'mæɡu/ {% raw %}<span class="heimu">不是爱妹狗啊</span>{% endraw %}，在家里电脑还是个大头（CRT）的时候就在玩了，其实头像也是在当时设定的，一直沿用至今。{% raw %}<span class="heimu">找不到女朋友誓不改头像</span>{% endraw %}
 
-# 复制按钮 主要是样式copy
+# 复制按钮 主要是需要添加copy样式
 
 <button class="button copy" data-clipboard-text="YH3WN-NKHFT-61FSS-E49FT"><i class="fas fa-copy"></i></button>
 
