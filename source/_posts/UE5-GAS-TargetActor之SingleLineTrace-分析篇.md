@@ -1,5 +1,5 @@
 ---
-title: UE5 GAS TargetActor之SingleLineTrace
+title: UE5 GAS TargetActor之SingleLineTrace 分析篇
 comments: true
 toc: true
 excerpt: ' '
@@ -37,11 +37,11 @@ WaitTargetData: FinalizeTargetActor()
                                                 └─ Trace: LineTraceWithFilter()
 ```
 
-本文主要关注 SingleLineTrace 的核心 **lineTrace** 。由于 `ConfirmationType` 和 `Reticle` 是属于 TargetActor 的部分，所以将 ConfirmationType 设为即时，并选择忽略源码中所有涉及 Reticle 的部分。
+本文主要关注 SingleLineTrace 的核心 **lineTrace** 。由于 `ConfirmationType` 和 `Reticle` 是属于 TargetActor 的部分，所以将 `ConfirmationType` 设为即时，并选择忽略源码中所有涉及 `Reticle` 的部分。
 
-## WaitTargetData::FinalizeTargetActor
+## WaitTargetData::FinalizeTargetActor()
 
-在 FinalizeTargetActor 中，可以观察到 TargetActor 的 `StartTargeting` 被调用，紧接着执行 `ConfirmTargeting` 。
+在 FinalizeTargetActor() 中，可以观察到 TargetActor 的 `StartTargeting()` 被调用，紧接着执行 `ConfirmTargeting()` 。
 
 ```cpp
 void UAbilityTask_WaitTargetData::FinalizeTargetActor(AGameplayAbilityTargetActor* SpawnedActor) const
@@ -68,7 +68,7 @@ void UAbilityTask_WaitTargetData::FinalizeTargetActor(AGameplayAbilityTargetActo
 }
 ```
 
-## Trace::StartTargeting
+## Trace::StartTargeting()
 
 ```cpp
 void AGameplayAbilityTargetActor_Trace::StartTargeting(UGameplayAbility* InAbility)
@@ -82,7 +82,7 @@ void AGameplayAbilityTargetActor_Trace::StartTargeting(UGameplayAbility* InAbili
 
 `SourceActor` 指向当前技能的 AvatarActor 。
 
-## TargetActor::ConfirmTargeting
+## TargetActor::ConfirmTargeting()
 
 ```cpp
 void AGameplayAbilityTargetActor::ConfirmTargeting()
@@ -98,9 +98,9 @@ void AGameplayAbilityTargetActor::ConfirmTargeting()
 }
 ```
 
-调用了 `ConfirmTargetingAndContinue` 。
+调用了 `ConfirmTargetingAndContinue()` 。
 
-## Trace::ConfirmTargetingAndContinue
+## Trace::ConfirmTargetingAndContinue()
 
 ```cpp
 void AGameplayAbilityTargetActor_Trace::ConfirmTargetingAndContinue()
@@ -115,9 +115,9 @@ void AGameplayAbilityTargetActor_Trace::ConfirmTargetingAndContinue()
 }
 ```
 
-这里的判断用到了之前 `StartTargeting` 当中的 `SourceActor` ，然后就是调用了关键的 `PerformTrace` ，通过其返回的 FHitResult 对象构造出 `FGameplayAbilityTargetDataHandle` 对象 。至于 `bDebug` 和 `FGameplayAbilityTargetDataHandle` 暂且不展开来说，先关注 `PerformTrace` 。
+这里的判断用到了之前 `StartTargeting()` 当中的 `SourceActor` ，然后就是调用了关键的 `PerformTrace()` ，通过其返回的 FHitResult 对象构造出 `FGameplayAbilityTargetDataHandle` 对象 。至于 `bDebug` 和 `FGameplayAbilityTargetDataHandle` 暂且不展开来说，先关注 `PerformTrace()` 。
 
-## SingleLineTrace::PerformTrace
+## SingleLineTrace::PerformTrace()
 
 先展示原始代码，不用担心，“瘦完身”就没剩多少了。
 
@@ -194,7 +194,7 @@ FHitResult AGameplayAbilityTargetActor_SingleLineTrace::PerformTrace(AActor* InS
 }
 ```
 
-可以根据方法名初步推测这段代码的目的。显然，存在一个射线追踪的起点 `TraceStart` ，然后通过 `AimWithPlayerController` 获取射线追踪的终点，接下来进行射线追踪，最终返回命中结果。
+可以根据方法名初步推测这段代码的目的。显然，存在一个射线追踪的起点 `TraceStart` ，然后通过 `AimWithPlayerController()` 获取射线追踪的终点，接下来进行射线追踪，最终返回命中结果。
 
 ### StartLocation
 
@@ -217,7 +217,7 @@ FGameplayAbilityTargetingLocationInfo UGameplayAbility::MakeTargetLocationInfoFr
 
 可以观察到，代码中构造了一个 `FGameplayAbilityTargetingLocationInfo` 对象，并相应地设置了 `LocationType` 、 `SourceActor` 和 `SourceAbility` 。虽然可以进一步查看 `FGameplayAbilityTargetingLocationInfo` 结构体的详细信息，但没必要，因为 `StartLocation.GetTargetingTransform()` 所需的数据正是 `MakeTargetLocationInfoFromOwnerActor` 已经设置好的那些参数。
 
-已知 `StartLocation` 是个 `FGameplayAbilityTargetingLocationInfo` 对象，现在查看 `FGameplayAbilityTargetingLocationInfo::GetTargetingTransform` 的具体实现：
+已知 `StartLocation` 是个 `FGameplayAbilityTargetingLocationInfo` 对象，现在查看 `FGameplayAbilityTargetingLocationInfo::GetTargetingTransform()` 的具体实现：
 
 ```cpp
 FTransform FGameplayAbilityTargetingLocationInfo::GetTargetingTransform() const
@@ -254,7 +254,7 @@ FTransform FGameplayAbilityTargetingLocationInfo::GetTargetingTransform() const
 
 之所以把其他 Case 也留着，是想说明 `EGameplayAbilityTargetingLocationType` 还有其他类型，其次除了 `MakeTargetLocationInfoFromOwnerActor` 以外，也可以使用 `MakeTargetLocationInfoFromOwnerSkeletalMeshComponent` 。在这种情况下，射线追踪的起点就不再是注释里的“InSourceActor->GetActorLocation();”了。
 
-### AimWithPlayerController
+### AimWithPlayerController()
 
 ```cpp
 void AGameplayAbilityTargetActor_Trace::AimWithPlayerController(const AActor* InSourceActor, FCollisionQueryParams Params, const FVector& TraceStart, FVector& OutTraceEnd, bool bIgnorePitch) const
@@ -330,9 +330,9 @@ FVector ViewEnd = ViewStart + (ViewDir * MaxRange);
 
 将旋转转换成方向，得到视野终点（ `ViewEnd` ） = 摄像机位置（ `ViewStart` ） + 摄像机方向（ `ViewDir` ） * 技能范围长度（ `MaxRange` ）。
 
-#### ClipCameraRayToAbilityRange
+#### ClipCameraRayToAbilityRange()
 
-为了方便理解，下面 `ClipCameraRayToAbilityRange` 源码中的形参名均被我替换成了实参名。
+为了方便理解，下面 `ClipCameraRayToAbilityRange()` 源码中的形参名均被我替换成了实参名。
 
 | 形参名 | 实参名 |
 | --- | --- |
@@ -445,16 +445,16 @@ ViewEnd = ViewStart + (DistanceAlongRay * ViewDir);        //Cam aim point clipp
 
 ![ViewEnd](ViewEnd.png)
 
-注意 `ClipCameraRayToAbilityRange` 当中的 `ViewEnd` 参数是非 const 引用，所以其实 `ClipCameraRayToAbilityRange` 就是为了把之前粗略计算的 `ViewEnd` 修正在能力的有效范围内。
+注意 `ClipCameraRayToAbilityRange()` 当中的 `ViewEnd` 参数是非 const 引用，所以其实 `ClipCameraRayToAbilityRange()` 就是为了把之前粗略计算的 `ViewEnd` 修正在能力的有效范围内。
 
-回到 `AimWithPlayerController` ：
+回到 `AimWithPlayerController()` ：
 
 ```cpp
 FHitResult HitResult;
 LineTraceWithFilter(HitResult, InSourceActor->GetWorld(), Filter, ViewStart, ViewEnd, TraceProfile.Name, Params);
 ```
 
-#### LineTraceWithFilter
+#### LineTraceWithFilter()
 
 ```cpp
 void AGameplayAbilityTargetActor_Trace::LineTraceWithFilter(FHitResult& OutHitResult, const UWorld* World, const FGameplayTargetDataFilterHandle FilterHandle, const FVector& Start, const FVector& End, FName ProfileName, const FCollisionQueryParams Params)
@@ -511,9 +511,9 @@ for (int32 HitIdx = 0; HitIdx < HitResults.Num(); ++HitIdx)
 }
 ```
 
-因为使用的是 `LineTraceMultiByProfile` ，可能会有多个命中结果，遍历判断命中结果是否有效以及是否能通过过滤器，返回首个符合条件的命中结果。
+因为使用的是 `LineTraceMultiByProfile()` ，可能会有多个命中结果，遍历判断命中结果是否有效以及是否能通过过滤器，返回首个符合条件的命中结果。
 
-再次回到 `AimWithPlayerController` 当中，剩余的部分除了一些工具方法以外，没什么其他的方法调用，就整体一块进行分析了。
+再次回到 `AimWithPlayerController()` 当中，剩余的部分除了一些工具方法以外，没什么其他的方法调用，就整体一块进行分析了。
 
 ```cpp
 const bool bUseTraceResult = HitResult.bBlockingHit && (FVector::DistSquared(TraceStart, HitResult.Location) <= (MaxRange * MaxRange));
@@ -597,7 +597,7 @@ OutTraceEnd = TraceStart + (AdjustedAimDir * MaxRange);
 
 ![OutTraceEnd](OutTraceEnd.png)
 
-终于回到了 `SingleLineTrace::PerformTrace` ，剩余的部分如下：
+终于回到了 `SingleLineTrace::PerformTrace()` ，剩余的部分如下：
 
 ```cpp
 FHitResult ReturnHitResult;
@@ -619,15 +619,15 @@ FHitResult ReturnHitResult;
 LineTraceWithFilter(ReturnHitResult, InSourceActor->GetWorld(), Filter, TraceStart, TraceEnd, TraceProfile.Name, Params);
 ```
 
-怎么又进行了一次射线追踪？在 `AimWithPlayerController` 当中不是进行了一次了吗，而且按上图展示的那种有符合条件的命中的情况，直接拿那次的命中结果不就行了吗？
+怎么又进行了一次射线追踪？在 `AimWithPlayerController()` 当中不是进行了一次了吗，而且按上图展示的那种有符合条件的命中的情况，直接拿那次的命中结果不就行了吗？
 
 图样图森破，视线上命中的目标不一定是 AvatarActor 沿着 `AdjustedAimDir` 上的第一个目标。
 
 ![TooYoungTooSimple](TooYoungTooSimple.png)
 
-`AimWithPlayerController` 中的 `LineTraceWithFilter` 确实已经进行了一次射线追踪，并且可能已经找到了一个有效的目标。然而，这个方法的主要目的是为了提供一个射线追踪的终点来调整玩家的瞄准方向，并不关心在这过程中找到的目标。
+`AimWithPlayerController()` 中的 `LineTraceWithFilter()` 确实已经进行了一次射线追踪，并且可能已经找到了一个有效的目标。然而，这个方法的主要目的是为了提供一个射线追踪的终点来调整玩家的瞄准方向，并不关心在这过程中找到的目标。
 
-而在 `PerformTrace` 中再次进行 `LineTraceWithFilter` 的目的则是通过 `AimWithPlayerController` 提供的射线追踪终点来找到这个瞄准方向上的第一个阻挡物，这个阻挡物将会是攻击或者技能影响的目标。这个方法是为了确认最终的目标并提供相关的命中结果。
+而在 `PerformTrace()` 中再次进行 `LineTraceWithFilter()` 的目的则是通过 `AimWithPlayerController()` 提供的射线追踪终点来找到这个瞄准方向上的第一个阻挡物，这个阻挡物将会是攻击或者技能影响的目标。这个方法是为了确认最终的目标并提供相关的命中结果。
 
 ```cpp
 //Default to end of trace line if we don't hit anything.
@@ -664,7 +664,7 @@ FGameplayAbilityTargetDataHandle AGameplayAbilityTargetActor_Trace::MakeTargetDa
 }
 ```
 
-当 `PerformTrace` 返回一个 `FHitResult` 对象，会被传入到 `MakeTargetData` 。在 `MakeTargetData` 中又会被传入 `MakeTargetDataHandleFromHitResult` 。
+当 `PerformTrace()` 返回一个 `FHitResult` 对象，会被传入到 `MakeTargetData()` 。在 `MakeTargetData()` 中又会被传入 `MakeTargetDataHandleFromHitResult()` 。
 
 ```cpp
 FGameplayAbilityTargetDataHandle FGameplayAbilityTargetingLocationInfo::MakeTargetDataHandleFromHitResult(TWeakObjectPtr<UGameplayAbility> Ability, const FHitResult& HitResult) const
@@ -723,9 +723,9 @@ struct GAMEPLAYABILITIES_API FGameplayAbilityTargetData_SingleTargetHit : public
 
 值得注意的是 `FGameplayAbilityTargetData_SingleTargetHit` 是从 `FGameplayAbilityTargetData` 继承而来的，所以 `FGameplayAbilityTargetDataHandle` 实际上就是一个用于存储 `FGameplayAbilityTargetData` 对象的结构体。只不过在这里，它具体存储的是 `FGameplayAbilityTargetData_SingleTargetHit` 对象，也就是说，它存储的是用于存储命中结果的对象。
 
-然后在 `AGameplayAbilityTargetActor_Trace::ConfirmTargetingAndContinue` 的最后一步，将这个 `FGameplayAbilityTargetDataHandle` 对象广播了出去，以便我们在后续的步骤中使用命中结果。
+然后在 `AGameplayAbilityTargetActor_Trace::ConfirmTargetingAndContinue()` 的最后一步，将这个 `FGameplayAbilityTargetDataHandle` 对象广播了出去，以便我们在后续的步骤中使用命中结果。
 
-如果有留意的话，会发现在上面 `FGameplayAbilityTargetData_SingleTargetHit` 的源码中，除了成员变量 `HitResult` ，我还保留了 `GetActors` 。`GetActors` 是一个比较常用的方法，经过蓝图库的封装后，它在蓝图中长这样：
+如果有留意的话，会发现在上面 `FGameplayAbilityTargetData_SingleTargetHit` 的源码中，除了成员变量 `HitResult` ，我还保留了 `GetActors()` 。`GetActors()` 是一个比较常用的方法，经过蓝图库的封装后，它在蓝图中长这样：
 
 ![GetActorsFromTargetData](GetActorsFromTargetData.png)
 
@@ -746,7 +746,7 @@ void AGameplayAbilityTargetActor_Trace::ConfirmTargetingAndContinue()
 }
 ```
 
-因为在 `ConfirmTargetingAndContinue` 当中把 `bDebug` 设置为了 false ，这导致在蓝图上的勾选变得无效。一个简单的解决方法就是继承 `AGameplayAbilityTargetActor_Trace` 或其子类，重写 `ConfirmTargetingAndContinue` ，从而移除这行代码。
+因为在 `ConfirmTargetingAndContinue()` 当中把 `bDebug` 设置为了 false ，这导致在蓝图上的勾选变得无效。一个简单的解决方法就是继承 `AGameplayAbilityTargetActor_Trace` 或其子类，重写 `ConfirmTargetingAndContinue()` ，从而移除这行代码。
 
 ### bTraceAffectsAimPitch
 
@@ -780,7 +780,7 @@ if (!bTraceAffectsAimPitch && bUseTraceResult)
 FVector OriginalAimDir = (ViewEnd - TraceStart).GetSafeNormal();
 ```
 
-这里的 `ViewEnd` 是经过 `ClipCameraRayToAbilityRange` 处理过的，也就是视线与技能范围相交的点。`GetSafeNormal` 是求单位向量，所以 `OriginalAimDir` 是 AvatarActor 指向 `ViewEnd` 的方向。
+这里的 `ViewEnd` 是经过 `ClipCameraRayToAbilityRange()` 处理过的，也就是视线与技能范围相交的点。`GetSafeNormal()` 是求单位向量，所以 `OriginalAimDir` 是 AvatarActor 指向 `ViewEnd` 的方向。
 
 ```cpp
 if (!OriginalAimDir.IsZero())
