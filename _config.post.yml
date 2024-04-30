@@ -6,9 +6,6 @@ widgets:
         collapsed: true
         depth: 3
     -
-        type: recommended_posts
-        position: left
-    -
         type: categories
         position: left
     -
