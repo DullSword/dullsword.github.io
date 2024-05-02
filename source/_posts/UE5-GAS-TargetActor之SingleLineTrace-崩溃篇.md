@@ -146,4 +146,4 @@ void UAbilitySystemComponent::RefreshAbilityActorInfo()
 
 顺带一提，有些 GAS 教程在每次 `GiveAbility()` 后都执行一次 `UAbilitySystemComponent::InitAbilityActorInfo()` ，我觉得应该是不需要的。因为 `FGameplayAbilityActorInfo` 结构体是缓存与使用能力的参与者相关联的数据，而不是缓存能力相关联的数据。
 
-最后你问我为什么不记得调用 `InitAbilityActorInfo()` ，得怪虚幻 5.3 不讲武德，虽然提供了蓝图版 AbilitySystemComponent 和蓝图节点 `GiveAbility()` ，却没有提供 `InitAbilityActorInfo()` 和 `RefreshAbilityActorInfo()` 的蓝图节点，我大意了啊，我想既然没有，那是不是帮我们处理好了，于是就没管它。直到在 GA 中使用 WaitTargetData 并试验 `AGameplayAbilityTargetActor_SingleLineTrace` 时，啪地一下就崩溃了，很快啊。
+最后你问我为什么不记得调用 `InitAbilityActorInfo()` ，得怪虚幻 5.3 不讲武德，虽然提供了蓝图版 AbilitySystemComponent 和蓝图节点 `GiveAbility()` （看了一眼， 5.1 就提供了），却没有提供 `InitAbilityActorInfo()` 和 `RefreshAbilityActorInfo()` 的蓝图节点。我大意了啊（想当然了），我想既然没有，那是不是帮我们处理好了，于是就没管它。直到在 GA 中使用 WaitTargetData 并试验 `AGameplayAbilityTargetActor_SingleLineTrace` 时，啪地一下就崩溃了，很快啊。
