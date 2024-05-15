@@ -8,7 +8,7 @@ categories: 工具
 tags: 
 - Github Actions
 - Autocheck
-sticky: 2
+sticky: 0
 recommend: 2
 ---
 
