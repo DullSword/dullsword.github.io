@@ -72,9 +72,11 @@ tags:
   - 具有全局的生存期，函数内的局部作用域
 - 静态成员变量
   - 具有全局的生存期，只不过只有类的局部作用域。
-  - 类中的静态成员变量只是声明，需要在cpp中对它进行定义。
-  - 只能在定义处对静态成员变量进行初始化。
-  - C++17 可以添加 `inline` 让静态成员变量成为内联的静态成员变量，就可以在类定义时初始化这个静态成员变量了，`inline static int i = 10;`
+  - 类中的静态成员变量只是声明，需要在cpp中对它进行定义。只能在定义处对静态成员变量进行初始化。
+    {% raw %}<article class="message is-info"><div class="message-body">{% endraw %}
+    C++17 可以添加 `inline` 让静态成员变量成为内联的静态成员变量，就可以在类定义时初始化这个静态成员变量了。
+    `inline static int i = 10;`
+    {% raw %}</div></article>{% endraw %}
 
     ``` cpp
     #include <iostream>
@@ -214,7 +216,7 @@ int main()
 
 ## 类 vs 结构体
 
-`class` 里的成员变量和成员函数默认为`private`访问类型，`struct`则相反。
+`class` 里的成员变量和成员函数默认为 `private` 访问类型， `struct` 则相反。
 
 ---
 
@@ -286,7 +288,9 @@ q++;     //ERROR
 
 ## 运算符重载
 
-我的理解就是运算符重载是为了方便，其实也可以不用运算符重载，而使用显式的函数调用，例如`T Add(const T& addend) const { return this.data + addend.data }`。
+我的理解就是运算符重载是为了方便，其实也可以不用运算符重载，而使用显式的函数调用，例如：
+
+`T Add(const T& addend) const { return this.data + addend.data; }`
 
 运算符重载有两种方式，一种是非成员函数重载，即使用友元函数形式；一种是成员函数重载。
 
@@ -295,7 +299,7 @@ q++;     //ERROR
 - `=`：赋值运算符
 - `( )`：函数调用运算符
 - `[ ]`：下标运算符
-- `->`：通过指针访问类成员的运算符
+- `->`：箭头运算符
 
 ### 使用场景
 
@@ -330,7 +334,7 @@ const Integer Integer::operator++(int){
 }
 ```
 
-前置运算符理论上性能更好点，尤其是对象使用自增或自减时。但如果没有涉及赋值行为，编译器**可能**会将后置优化成前置。
+前置运算符理论上性能更好点，尤其是自定义数据类型。但如果没有涉及赋值行为，编译器**可能**会将后置优化成前置。
 
 ---
 
@@ -444,7 +448,7 @@ modern-cpp-features](https://github.com/AnthonyCalandra/modern-cpp-features/blob
 一般直接声明对象就行，因为使用 `new` 申请内存空间有开销，而且需要 `delete`，但直接声明的形式不适合以下情况：
 
 - 需要大量内存的对象
-- 该对象比当前作用域更长
+- 该对象的生存周期应当比当前作用域更长
 - 需要动态申请内存的情况（比如数组的长度是未知的）。
 
 ---
@@ -554,7 +558,7 @@ public:
 ## 内联函数
 
 - 内联函数在声明和定义都要写上 `inline`，也可以直接把函数体写在声明中
-- 内联函数就是把函数部分直接替换到调用它的地方，运行时节省调用函数所带来的额外开销，但会使源代码大小增加，绝大多数情况下是值得的，用廉价的空间换取时间
+- 内联函数就是把函数体部分直接替换到调用它的地方，运行时节省调用函数所带来的额外开销，但会使源代码大小增加，绝大多数情况下是值得的，用廉价的空间换取时间
 - 很小的函数或者循环调用的函数，适合写成内联函数；函数内容很大或者含有递归，则不适合写成内联函数。但 `inline` 关键词只算是给编译器一种建议，真正是否视为内联函数进行编译，是由编译器决定的。例如编写的内联函数内容很大或者含有递归，会被编译器拒绝，因为空间的增长会非常迅速
 
 ---
@@ -573,7 +577,7 @@ public:
 
 - 继承中一个函数是 `virtual`，那么所有的子类下的这个函数都是 `virtual`
 - 如果父类和子类的两个函数是 `virtual` 的，函数名相同，参数表相同，构成 `override`（可以在函数后加 `override` 关键字让编译器帮忙检查是否正确重写）。如果重写了父类中有重载函数的函数，则必须在子类中重写所有变体，不能只重写其中一个，因为在子类中父类函数以及变体都将会被隐藏
-- 类有一个 `virtual` 函数，析构函数就必须是 `virtual`
+- 类有一个 `virtual` 函数，析构函数就必须是 `virtual`（最好总是将析构函数声明为虚函数）
   - 析构不声明为`virtual`：
 
     ``` cpp
@@ -585,6 +589,9 @@ public:
         A(){
             cout<<"A constructor"<<endl;
         }
+        virtual void Test(){
+            cout<<"A Test"<<endl;
+        }
         ~A(){
             cout<<"A destructor"<<endl;
         }
@@ -595,6 +602,9 @@ public:
         B(){
             cout<<"B constructor"<<endl;
         }
+        void Test() override {
+            cout<<"B Test"<<endl;
+        }
         ~B(){
             cout<<"B destructor"<<endl;
         }
@@ -602,10 +612,12 @@ public:
 
     int main(){
         A* a = new B();
+        a->Test();
         delete a;
         //输出
         //A constructor
         //B constructor
+        //B Test
         //A destructor
     }
     ```
@@ -621,6 +633,9 @@ public:
         A(){
             cout<<"A constructor"<<endl;
         }
+        virtual void Test(){
+            cout<<"A Test"<<endl;
+        }
         virtual ~A(){
             cout<<"A destructor"<<endl;
         }
@@ -631,6 +646,9 @@ public:
         B(){
             cout<<"B constructor"<<endl;
         }
+        void Test() override {
+            cout<<"B Test"<<endl;
+        }
         ~B(){
             cout<<"B destructor"<<endl;
         }
@@ -638,10 +656,12 @@ public:
 
     int main(){
         A* a = new B();
+        a->Test();
         delete a;
         //输出
         //A constructor
         //B constructor
+        //B Test
         //B destructor
         //A destructor
     }
@@ -680,7 +700,7 @@ dtor是destructor缩写
 
 ## 接口
 
-C++接口是使用抽象类来实现的，差别在于：
+C++ 接口是使用抽象类来实现的，差别在于：
 
 - 抽象类更多是为了继承而使用，可以有静态成员变量和方法的实现
 - 接口更多是为了规范和约束，只将公开的方法声明出来
@@ -724,7 +744,9 @@ C++接口是使用抽象类来实现的，差别在于：
 
 ### static_cast
 
-跟编译器隐式转换一样。可用于将指向基类的指针转换为指向派生类的指针等操作。此类转换并非始终安全。
+通常使用 `static_cast` 转换数值数据类型，例如将枚举型转换为整型或将整型转换为浮点型，而且同时明确表达需要转换类型的意图。
+
+`static_cast` 可用于将指向基类的指针转换为指向派生类的指针等操作，但此类转换并非始终安全。 `static_cast` 转换安全性不如 `dynamic_cast` 转换，因为 `static_cast` 不执行运行时类型检查。
 
 ### const_cast
 
@@ -766,7 +788,7 @@ int *b = const_cast<int *>(a);
 取不了地址的匿名对象，表达式结束后就不存在的临时对象，又分纯右值和将亡值。
 
 - 纯右值：要么是纯粹的字面量，例如 `10`, `true`； 要么是求值结果相当于字面量或匿名临时对象，例如 `1+2`
-- 将亡值：即将被销毁、却能够被移动的值
+- 将亡值：即将被销毁、却能够被移动的值（可能原本是左值）
 
 ``` cpp
 std::vector<int> foo() {
@@ -777,7 +799,9 @@ std::vector<int> foo() {
 std::vector<int> v = foo();
 ```
 
-`v` 是左值、 `foo()` 返回的值就是右值（也是纯右值）, `temp` 是将亡值。希望把将亡值利用起来，所以就有了**移动语义**。
+`v` 是左值； `foo()` 返回的值（是一个临时对象，即 `temp` 的副本）是右值（纯右值）； `temp` 在 `foo()` 内本身是左值，但返回时由于马上要被销毁了但其实可以通过移动利用起来，所以此时 `temp` 为将亡值。
+
+希望把将亡值利用起来，所以就有了**移动语义**。
 
 ---
 
@@ -793,23 +817,33 @@ std::vector<int> v = foo();
 
 `T func(T&& x){}`，参数 `x` 是一个右值引用，也就是函数 `func` 需要传入一个右值。需要注意的是 `x` 本身是个左值，因为它是个变量，取得到地址，可以在等式的左边。
 
-### 移动构造函数
+### 移动构造函数/移动赋值运算符
 
-``` cpp
+```cpp
 class A {
     int* pointer;
 
 public:
-    A(A&& a) :pointer(a.pointer)
-    {
-        a.pointer = nullptr; //将a.pointer设置为nullptr，这样a释放进行析构时就不会回收到现在被转移控制权的这块内存区域
+    // 移动构造函数
+    A(A&& a) : pointer(a.pointer) {
+        a.pointer = nullptr;        //将a.pointer设置为nullptr，这样a释放进行析构时就不会回收到现在被转移控制权的这块内存区域
+    }
+
+    // 移动赋值运算符
+    A& operator=(A&& a) {
+        if (this != &a) {
+            delete pointer;         // 释放当前对象的资源
+            pointer = a.pointer;    // 移动资源
+            a.pointer = nullptr;    // 将原对象的资源设置为安全的默认状态
+        }
+        return *this;               // 返回 *this 以支持链式赋值
     }
 };
 ```
 
 ### std::move能提高运行效率？
 
-`std::move()` 只是将变量转换成右值引用而已，本身并不能提高效率，而是在类有实现移动构造函数和移动赋值函数，也就是提供移动语义的情况下才提高了效率。C++语言内建的数据类型和STL标准模板库的容器已经实现了移动语义。
+`std::move()` 只是将变量转换成右值引用而已，本身并不能提高效率，而是在类有实现移动构造函数或重载了移动赋值运算符，也就是提供移动语义的情况下才提高了效率。 C++ 语言内建的数据类型和 STL 标准模板库的容器已经实现了移动语义。
 
 ---
 
@@ -834,49 +868,101 @@ public:
 
 用类把资源及相关操作封装起来，在构造函数中获取资源，在析构函数中释放资源。使用时只要声明该类的对象，进行操作，在出了作用域后，就会自动调用它的析构函数对资源进行释放，就不需要显式地去释放。
 
-- 直接声明资源对象不就行了？
-    还是上述 [new对象 vs 直接声明对象](#new对象-vs-直接声明对象)提到的情况。
-  - 资源对象很大，放到栈上不适合，使用RAII，栈上就只存有管理资源的对象，该对象持有资源的引用，相对的占用空间就小
-  - 作用域这点就不适用了，因为RAII就是要利用这点，让管理资源的对象的生命周期等于资源对象的生命周期
-  - 有些资源对象需要动态申请，没办法直接声明对象
+```cpp
+template<typename T>
+class SimpleUniquePtr {
+private:
+    T* _ptr;
+
+public:
+    explicit SimpleUniquePtr(T* ptr = nullptr) : _ptr(ptr) {}
+
+    ~SimpleUniquePtr() {
+        delete _ptr;
+    }
+
+    SimpleUniquePtr(const SimpleUniquePtr&) = delete;
+    SimpleUniquePtr& operator=(const SimpleUniquePtr&) = delete;
+
+    SimpleUniquePtr(SimpleUniquePtr&& other) : _ptr(other.release()) {}
+
+    SimpleUniquePtr& operator=(SimpleUniquePtr&& other) {
+        reset(other.release());
+        return *this;
+    }
+
+    T& operator*() const { 
+        return *_ptr;
+    }
+    T* operator->() const {
+        return _ptr;
+    }
+
+    T* get() const {
+        return _ptr;
+    }
+
+    T* release() {
+        T* oldPtr = _ptr;
+        _ptr = nullptr;
+        return oldPtr;
+    }
+
+    void reset(T* ptr = nullptr) {
+        delete _ptr;
+        _ptr = ptr;
+    }
+};
+```
+
+#### 直接声明资源对象不就行了？
+
+类似上述 [new对象 vs 直接声明对象](#new对象-vs-直接声明对象)提到的情况。
+
+- 资源对象很大，放到栈上不适合，使用 RAII ，栈上就只存有管理资源的对象，该对象持有资源的引用，相对的占用空间就小
+- 作用域这点就不一样了，因为 RAII 就是要利用这点，让资源对象的生命周期等于管理资源的对象的生命周期
+- 有些资源对象需要动态申请，没办法直接声明对象
 
 ### unique_ptr
 
 一种独占的智能指针，它禁止其他智能指针与其共享同一个对象，从而保证代码的安全。既然是独占，换句话说就是不可复制。但是，我们可以利用 `std::move` 将其转移给其他的 `unique_ptr`；
 
 - `make_unique()`：能够用来消除显式地使用 `new`，C++11没有提供，C++14才加入标准库的
-- `release()`：返回当前 `unique_ptr` 指针对所指堆内存，可以让普通指针来接管，但该存储空间并不会被销毁。单独用则会导致丢了控制权的同时，原来的内存得不到释放
+- `get()`：可以通过该方法来获取原始指针
+- `release()`：返回当前 `unique_ptr` 所指的堆内存，让普通指针/智能指针来接管，但该存储空间并不会被销毁。单独使用则会导致丢了控制权的同时，原来的内存得不到释放
 - `reset(p)`：该函数会释放当前 `unique_ptr` 管理的对象，然后获取 `p` 所指对象的所有权。这点挺容易理解，要接受新的，就要把旧的释放掉，不然就内存泄露了
 
 ### shared_ptr
 
-保持对象共享所有权的智能指针。多个 `shared_ptr` 对象可占有同一对象。
+共享对象所有权的智能指针。多个 `shared_ptr` 对象可占有同一对象。
 
 - `make_shared()`：能够用来消除显式地使用 `new`
 - `get()`：可以通过该方法来获取原始指针
-- `reset()`：当函数没有实参时，该函数会使当前 `shared_ptr` 所指堆内存的引用计数减 1，同时将当前对象重置为一个空指针；当为函数传递一个新申请的堆内存时，则调用该函数的 `shared_ptr` 对象会获得该存储空间的所有权，并且引用计数的初始值为 1。要跟 `unique_ptr` 的 `reset()` 进行区分，`shared_ptr` 的 `reset()` 只是减少引用，并不释放内存，因为其他 `shared_ptr` 还要用呢
-- `use_count()`：查看一个对象的引用计数
+- `reset()`：当函数没有实参时，该函数会使当前 `shared_ptr` 所指堆内存的引用计数减 1，同时将当前 `shared_ptr` 重置为一个空指针；当为函数传递一个新申请的堆内存时，则调用该函数的 `shared_ptr` 对象会共享该存储空间的所有权，并且引用计数的初始值为 1。要跟 `unique_ptr` 的 `reset()` 进行区分，`shared_ptr` 的 `reset()` 只是减少引用，并不释放内存，因为其他 `shared_ptr` 还要用呢
+- `use_count()`：查看所指对象的引用计数
 
 #### 使用场景
 
 - 有多个使用者共同使用同一个对象，而没有一个明显的拥有者
 - 一个对象的复制操作很昂贵
-- 要把指针存入标准库容器，要传送对象到库或从库获取对象，而这些对象没有明确的所有权
+- 要把指针存入标准库容器/要传递对象给软件库或从软件库获取对象，而这些对象没有明确的所有权
 
 ### weak_ptr
 
-是 `shared_ptr` 的辅助指针。因为 `share_ptr` 用的引用计数，循环引用会有问题，所以引入了 `weak_ptr`。当 `weak_ptr` 类型指针的指向和某一 `shared_ptr` 指针相同时，`weak_ptr` 指针并不会使所指堆内存的引用计数加 1；同样，当 `weak_ptr` 指针被释放时，之前所指堆内存的引用计数也不会因此而减 1。因为 `weak_ptr` 不计入引用计数，同时另外记录弱引用，所以遇到循环引用问题时，只要把其中一个设为 `weak_ptr` 就行了，会从这个 `weak_ptr` 开始回收。
+是一种可以共享但不拥有对象（不控制所指向对象生命周期）的智能指针。可以作为 `shared_ptr` 的辅助指针，因为 `share_ptr` 用的是引用计数，循环引用会有问题，所以引入了 `weak_ptr`。当 `weak_ptr` 的指向和某一 `shared_ptr` 相同时，`weak_ptr` 并不会使所指堆内存的引用计数加 1；同样，当 `weak_ptr` 被释放时，之前所指堆内存的引用计数也不会因此而减 1。因为 `weak_ptr` 不计入引用计数，同时另外记录弱引用，所以遇到循环引用问题时，只要把其中合适的一个 `shared_ptr` 改为 `weak_ptr` 就行了，会从这个 `weak_ptr` 指向的对象开始回收。
 
-- `use_count()`：查看指向和当前 `weak_ptr` 指针相同的 `shared_ptr` 指针的数量
-- `expired()`：判断当前 `weak_ptr` 指针为否过期（指针为空，或者指向的堆内存已经被释放）
-- `lock()`：如果当前 `weak_ptr` 已经过期，则该函数会返回一个空的 `shared_ptr` 指针；反之，该函数返回一个和当前 `weak_ptr` 指向相同的 `shared_ptr` 指针
-- `reset()`：将当前 `weak_ptr` 指针置为空指针
+- `use_count()`：查看指向和当前 `weak_ptr` 相同的 `shared_ptr` 的数量
+- `expired()`：判断当前 `weak_ptr` 为否过期（指针为空，或者指向的堆内存已经被释放）
+- `lock()`：如果当前 `weak_ptr` 已经过期，则该函数会返回一个空的 `shared_ptr` ；反之，该函数返回一个和当前 `weak_ptr` 指向相同的 `shared_ptr` 
+- `reset()`：将当前 `weak_ptr` 置为空指针
 
 ---
 
 ## STL标准模板库
 
 ### 迭代器
+
+迭代器就是一种对象，它提供了一种统一的接口，使得我们能够方便地对容器内的元素进行遍历。通过迭代器，我们可以在不需要了解容器内部实现细节的情况下，以一种统一的方式来访问容器中的元素。这种抽象的设计使得我们可以编写通用的代码，同时提高了代码的灵活性和可重用性。常见的实现方式就是指针，所以跟指针的操作方式很相似。
 
 {% raw %}<article class="message is-link"><div class="message-body">{% endraw %}
 作者： Khellendros
@@ -891,10 +977,10 @@ public:
 
 ### vector
 
-- `size()`：返回容器中的元素数
-- `capacity()`：返回容器当前已为之分配空间的元素数
-- `reserve(n)`：增加 `vector` 的容量到大于或等于 `n` 的值。若 `n` 大于当前的 `capacity()`，则分配新存储，否则该方法不做任何事。正确使用该方法能避免不必要的分配
-- `resize(n)`：重设容器大小以容纳 `n` 个元素。若当前大小大于 `n` ，则末尾多出的元素会被删除；若当前大小小于 `n` ，则 `vector` 会调用默认构造函数创建元素，并存储到容器末尾，如果 `n` 比 `capacity` 还要大，则 `vector` 会先扩增
+- `size()`：返回容器中当前存储的元素数量
+- `resize(n)`：改变容器中的元素数量为 `n` 。如果 `n` 小于当前的 `size()`，则删除超出的元素；如果 `n` 大于当前的 `size()`，则在末尾添加默认构造的元素直到数量达到 `n`
+- `capacity()`：返回容器当前已为之分配空间的元素数（即可以存储的元素数量）
+- `reserve(n)`：用于预分配内存，增加 `vector` 的容量到等大于 `n` 的值。若 `n` 大于当前的 `capacity()`，则分配新存储，否则该方法不做任何事。正确使用该方法能避免不必要的分配
 
 ### 容器底层实现
 
