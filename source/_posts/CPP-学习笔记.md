@@ -860,6 +860,42 @@ public:
 
 ---
 
+## 列表初始化（List-initialization）
+
+不要跟 [initializer list](https://zh.cppreference.com/w/cpp/language/constructor) 混淆了。
+
+列表初始化是 C++11 引入的一种新的初始化方式，可以用于初始化变量、数组、容器等。它使用花括号 `{}` 进行初始化，提供了更统一和安全的初始化方式，避免了窄化转换（narrowing conversion）。
+
+### 直接列表初始化
+
+```cpp
+int x{10};
+MyClass obj{10, 20, ref_var};
+std::vector<int> vec{1, 2, 3, 4};
+```
+
+### 拷贝列表初始化
+
+```cpp
+int x = {10};
+MyClass obj = {10, 20, ref_var};
+std::vector<int> vec = {1, 2, 3, 4};
+```
+
+在编译器未优化的情况下，这种形式可能会：
+
+1. 调用一次构造函数来创建临时对象。
+2. 调用一次拷贝构造函数来复制临时对象。
+3. 最后销毁临时对象。
+
+### 禁止窄化转换
+
+```cpp
+int x{3.14}; // 错误，不能从 double 窄化转换为 int
+```
+
+---
+
 ## 智能指针
 
 利用栈元素离开作用域自动回收内存的特点。
