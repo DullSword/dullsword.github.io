@@ -62,6 +62,47 @@ tags:
 
 ---
 
+### 字符串
+
+#### char*
+
+```cpp
+char* str = "hello";
+```
+
+其中 `"hello"` 是一个字符串常量，它被存储在内存的只读部分。而 `str` 是一个指针，它指向这个字符串常量的首地址，不能通过它来修改 `"hello"` 。
+
+#### char str[]
+
+```cpp
+char str[] = "hello";
+```
+
+其中 `"hello"` 被视为一个字符数组，它被存储在栈上。这个数组的每个元素都可以被修改。
+
+#### string
+
+```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main () {
+    string str1 = "hello";
+
+    str2 = str1;
+    cout << "str2 : " << str2 << endl;
+    
+    str3 = str1 + str2;
+    cout << "str1 + str2 : " << str3 << endl;
+
+    return 0;
+}
+```
+
+---
+
 ## static
 
 ### 变量
