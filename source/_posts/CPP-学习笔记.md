@@ -50,6 +50,34 @@ tags:
 
 可以对指针用下标运算符[]，是因为可以把指针当作数组的首元素地址，但只有[0]是正确的，如果将后续数据当作数组元素则是错误的。就像可以把一个整数当作是地址来看待，也可以将地址当作整数来看待，但不一定是正确的。
 
+### 双重指针
+
+常见于在函数中修改指针：
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+void allocateMemory(int** ptr) {
+    *ptr = new int(10);
+}
+
+int main() {
+    int* p = nullptr;
+
+    allocateMemory(&p);  // 传递指针的地址
+
+    cout << *p << endl;  // 输出 10
+
+    delete p;
+
+    return 0;
+}
+```
+
+通过将指针的地址传递给函数，我们可以在函数中修改指针的值。
+
 ---
 
 ## 数组
