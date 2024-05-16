@@ -750,22 +750,30 @@ C++ 接口是使用抽象类来实现的，差别在于：
 
 ### const_cast
 
+`const_cast` 最常见的用途是移除 `const` 属性，使得可以修改原本被声明为 `const` 的变量。
+
+但是移除 `const` 属性后修改**常量**对象会导致未定义行为，因此只有在确定最终修改到的对象不是 `const` 时才应进行此操作。
+
 ```cpp
 // const_cast < typename > (expression)
 
 int i = 10;
 
 const int *a = &i;
-// *a = 11; //error: assignment of read-only location ‘* a’
-int *b = const_cast<int *>(a);
-*b = 12;
-```
+// *a = 11; // error: assignment of read-only location ‘* a’
+int *pa = const_cast<int *>(a);
+*pa = 12;   // ok: i = 12
 
-除了 `const`、`volatile`、`__unaligned` 限定符以外，`typename` 和 `expression` 必须是相同类型。
+const int j = 20;
+
+const int *b = &j; 
+int *pb = const_cast<int *>(b);
+*pb = 22;   // 未定义行为， j 可能仍为 20 ，因为编译器可能对 const 对象进行优化，假设其值不会改变
+```
 
 #### 使用场景
 
-有这样一个指针或引用，它大多时候需要是 `const`，但有时需要它是不带 `const` 的类型（比如第三方库的函数入参没要求是 `const`）。
+有这样一个指针或引用，它大多时候需要是 `const`，但有时需要它是不带 `const` 的类型（比如第三方库的函数入参没要求是 `const` ）。
 
 ### dynamic_cast
 
