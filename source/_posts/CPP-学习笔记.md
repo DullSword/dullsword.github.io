@@ -1140,6 +1140,7 @@ public:
 
 ``` cpp
 #include <array>
+#include <algorithm>
 #include <iostream>
  
 int main()
