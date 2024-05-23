@@ -26,7 +26,7 @@ tags:
 - 没有特殊需要，就选择 `int`
     现在的CPU的字长普遍是32位或64位，一次内存读写就是一个 `int`，一次计算也是一个 `int`，选择更短的类型不会更快，甚至可能更慢。现代的编译器一般会设计内存对齐，所以更短的类型实际在内存中有可能也占据一个 `int` 的大小（虽然 `sizeof` 告诉你更小)。
 
-    ![](int.png)
+    ![int](int.png)
 
     <a class="tag is-dark is-medium" style="margin-bottom: 1rem" href="https://www.icourse163.org/learn/ZJU-9001?tid=9001#/learn/content?type=detail&id=84018&cid=101079" target="_blank">
     <span class="icon"><i class="fas fa-camera"></i></span>&nbsp;&nbsp;
@@ -417,7 +417,7 @@ const Integer Integer::operator++(int){
 
 ## 拷贝构造
 
-`T::T(const T& 形参)`
+`T::T(const T&)`
 
 以下情况会触发拷贝构造：
 
@@ -505,8 +505,7 @@ public : Thing(int _foo, int _bar) : member1(), member2(){
 
 相关：
 
-- [Non-static data member initializers - 
-modern-cpp-features](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#non-static-data-member-initializers)
+- [Non-static data member initializers - modern-cpp-features](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#non-static-data-member-initializers)
 - [Static Data Member Initialization](https://stackoverflow.com/questions/11300652/static-data-member-initialization)
 - [(Non) Static Data Members Initialization, from C++11 till C++20](https://www.cppstories.com/2015/02/non-static-data-members-initialization/)
 
@@ -601,7 +600,7 @@ int main(){
 }
 ```
 
-Or
+或者
 
 ``` cpp
 class B : public A {
@@ -773,7 +772,7 @@ public:
 
 ## 虚函数表
 
-![](vtable.png)
+![vtable](vtable.png)
 
 {% raw %}<article class="message is-info"><div class="message-body">{% endraw %}
 dtor是destructor缩写
@@ -809,7 +808,7 @@ C++ 接口是使用抽象类来实现的，差别在于：
 
 ## 匿名函数（lambda 表达式）
 
-```
+```text
 [ captures ] ( params ) specs requires(optional) { body }
 ```
 
@@ -1097,7 +1096,7 @@ public:
 
 - `use_count()`：查看指向和当前 `weak_ptr` 相同的 `shared_ptr` 的数量
 - `expired()`：判断当前 `weak_ptr` 为否过期（指针为空，或者指向的堆内存已经被释放）
-- `lock()`：如果当前 `weak_ptr` 已经过期，则该函数会返回一个空的 `shared_ptr` ；反之，该函数返回一个和当前 `weak_ptr` 指向相同的 `shared_ptr` 
+- `lock()`：如果当前 `weak_ptr` 已经过期，则该函数会返回一个空的 `shared_ptr` ；反之，该函数返回一个和当前 `weak_ptr` 指向相同的 `shared_ptr`
 - `reset()`：将当前 `weak_ptr` 置为空指针
 
 ---
