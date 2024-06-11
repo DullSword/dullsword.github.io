@@ -112,9 +112,9 @@ navbar:
         # About: /about
     # Links to be shown on the right of the navigation bar
     links:
-        Game:
+        Demo:
             icon: fas fa-gamepad
-            url: /game
+            url: /Demo
         GitHub:
             icon: fab fa-github
             url: 'https://github.com/dullsword'
