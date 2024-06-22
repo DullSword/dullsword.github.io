@@ -9,7 +9,7 @@ article:
 
 ## Unreal Engine
 
-### 危
+### 仿只狼
 
 - 攻击、防御、弹反动作
 - 连续攻击
@@ -17,6 +17,13 @@ article:
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="//player.bilibili.com/player.html?aid=294966176&bvid=BV12F411q7CA&cid=464566582&page=1"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
+</div>
+
+- 使用 GAS 重新实现
+- 增加了蓄力攻击
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+    <iframe src="//player.bilibili.com/player.html?aid=112631524428050&bvid=BV1JEgjewEeX&cid=500001585440754&page=1"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
 </div>
 
 ### 毕设《盘古》
@@ -35,7 +42,9 @@ article:
     <iframe src="/IWantMedals"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
 </div>
 
-## 2合1小游戏（Flappy Bird + 涂鸦跳跃）
+### 2合1小游戏（Flappy Bird + 涂鸦跳跃）
+
+主界面左右滑动切换游戏。
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="/2IN1"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
