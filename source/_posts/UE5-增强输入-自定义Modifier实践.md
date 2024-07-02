@@ -1,5 +1,5 @@
 ---
-title: UE5 增强输入 自定义Modifier
+title: UE5 增强输入 自定义Modifier实践
 comments: true
 toc: true
 excerpt: ' '
@@ -17,6 +17,14 @@ tags:
 例如下图，同时按住 WS ，人物会沿着 S 方向移动，因为 S 在 W 之后。
 
 ![previous_mapping](previous_mapping.png)
+
+{% message color:warning %}
+
+已知 5.3 版本的输入系统为 InputAction 提供了“累加行为”，所以不再需要为此自定义 Modifier 了。
+
+![accumulation_behavior](accumulation_behavior.png)
+
+{% endmessage %}
 
 于是为了实现旧版输入系统的效果，我参考了 [Enhanced Input System when pressing both keys for an Axis1D](https://www.reddit.com/r/unrealengine/comments/15dqngd/enhanced_input_system_when_pressing_both_keys_for/) 讨论中 [Tezenari 的思路](https://www.reddit.com/r/unrealengine/comments/15dqngd/comment/ju47la1/?utm_source=share&utm_medium=web2x&context=3) ，创建了一个自定义修改器 "MutexKey" 来解决此问题。（当然你也可以把移动输入操作 `IA_Move` 拆成四个单独方向的输入操作来解决）
 
