@@ -22,7 +22,7 @@ tags:
 
 已知 5.3 版本的输入系统为 InputAction 提供了“累加行为”，所以不再需要为此自定义 Modifier 了。
 
-![accumulation_behavior](accumulation_behavior.png)
+{% asset_img accumulation_behavior.png %}
 
 {% endmessage %}
 
