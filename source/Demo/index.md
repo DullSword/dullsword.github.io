@@ -26,6 +26,12 @@ article:
     <iframe src="//player.bilibili.com/player.html?aid=112631524428050&bvid=BV1JEgjewEeX&cid=500001585440754&page=1"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
 </div>
 
+- 攀爬
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+    <iframe src="//player.bilibili.com/player.html?aid=112716601755206&bvid=BV1mQhNeaEuA&cid=500001602807776&page=1"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
+</div>
+
 ### 毕设《盘古》
 
 以中国神话故事“盘古开天”为解谜线索的动作冒险游戏。
