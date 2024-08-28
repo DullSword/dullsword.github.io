@@ -31,6 +31,7 @@ i18n_dir: :lang
 skip_render: 
   - 2IN1/**
   - IWantMedals/**
+  - CrampedRoomOfDeath/**
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -96,6 +97,7 @@ pagination_dir: page
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
+  - CrampedRoomOfDeath/cocos-js/_virtual_cc-7c827b57.js
 exclude:
 ignore:
 
