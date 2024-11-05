@@ -275,6 +275,41 @@ Android 平台通过编辑器和 Android Studio 编译后的结果有些区别�
 4. [部署远程版本](#4-部署远程版本)
 5. [热更新](#7-热更新)
 
+## 实际项目应用
+
+只需要将实际项目设置成类似范例工程的初始环境，后续的步骤就是跟上文一样了。
+
+1. 复制范例工程相关组件、插件和脚本到实际项目中。
+    - 将范例工程中的热更新组件 `assets/hotupdate/` 复制到项目中。
+
+        {% blockquote @CocosCreatorDocs https://docs.cocos.com/creator/3.8/manual/zh/advanced-topics/hot-update.html#%E7%83%AD%E6%9B%B4%E6%96%B0%E7%BB%84%E4%BB%B6 资源热更新教程 - 热更新组件 %}
+        在范例工程中，热更新组件的实现位于 assets/hotupdate/HotUpdate.ts（GitHub | Gitee）中，开发者可以参考这种实现，也可以自由的按自己的需求修改。
+        {% endblockquote %}
+
+        ![hot_update_script](hot_update_script.png)
+    - 将范例工程中的 hot-update 插件 `extensions/hot-update` 复制到项目中并启用。
+
+        {% blockquote @CocosCreatorDocs https://docs.cocos.com/creator/3.8/manual/zh/advanced-topics/hot-update.html#%E6%89%93%E5%8C%85%E5%8E%9F%E7%94%9F%E7%89%88%E6%9C%AC 资源热更新教程 - 打包原生版本 %}
+        并且应该确保在工程目录的 extensions 文件夹里导入 hot-update 编辑器插件（范例工程里已经导入了该插件）
+        该编辑器插件会在每次构建结束后，自动给 main.js 附加上搜索路径设置的逻辑和更新中断修复代码。
+        {% endblockquote %}
+
+        ![hot_update_extension](hot_update_extension.png)
+        ![hot_update_extension_enable](hot_update_extension_enable.png)
+    - 将范例工程中的 version_generator.js 复制到项目中。
+2. [使用 Version Generator 来生成 Manifest 文件](#5-使用-version-generator-来生成-manifest-文件)以供后续绑定时使用。
+3. 绑定脚本和属性以及事件。
+    下列图中有些属性没有进行绑定，是因为没有实现或者没有用到对应功能，可以根据自己的情况来处理。
+
+    - HotUpdate
+        ![hot_update_binding](hot_update_binding.png)
+    - UpdatePanel
+        ![update_panel_binding](update_panel_binding.png)
+    - CheckButton
+        ![check_button_binding](check_button_binding.png)
+    - UpdateButton
+        ![update_button_binding](update_button_binding.png)
+
 ## 参考
 
 - [资源热更新教程](https://docs.cocos.com/creator/3.8/manual/zh/advanced-topics/hot-update.html)
