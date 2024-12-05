@@ -127,12 +127,16 @@ using namespace std;
 
 int main () {
     string str1 = "hello";
+    cout << "Original string: " << str1 << endl;
 
-    str2 = str1;
+    str1[0] = 'H';
+    cout << "After modifying first character: " << str1 << endl;
+
+    str1 += ", world!";
+    cout << "After appending: " << str1 << endl;
+
+    string str2 = str1;
     cout << "str2 : " << str2 << endl;
-    
-    str3 = str1 + str2;
-    cout << "str1 + str2 : " << str3 << endl;
 
     return 0;
 }
