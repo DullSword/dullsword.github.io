@@ -654,7 +654,7 @@ public:
 
 - 继承中一个函数是 `virtual`，那么所有的子类下的这个函数都是 `virtual`
 - 如果父类和子类的两个函数是 `virtual` 的，**函数名相同**，**参数表相同**，构成 `override`（可以在函数后加 `override` 关键字让编译器帮忙检查是否正确重写）。
-  - `this` 不同，构不成重写：
+  - 参数 `this` 不同（const this 和 this），构不成重写：
 
     ```cpp
     #include <iostream>
