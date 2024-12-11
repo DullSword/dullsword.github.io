@@ -483,6 +483,57 @@ public : Thing(int _foo, int _bar) : member1(), member2(){
 
 两个同类对象进行赋值（不是初始化，初始化是调用拷贝构造），会按成员复制，如果类成员包含指针，这时可以重载赋值运算符进行处理。
 
+```cpp
+#include <iostream>
+
+class ClassB
+{
+public:
+    int value;
+
+    ClassB(int val = 0) : value(val) {}
+
+    ClassB(const ClassB &other) : value(other.value) {}
+};
+
+class ClassA
+{
+private:
+    ClassB *bPtr;
+
+public:
+    ClassA(int val) : bPtr(new ClassB(val)) {}
+
+    ClassA(const ClassA &other) : bPtr(new ClassB(*other.bPtr)) {}
+
+    // 重载赋值运算符
+    ClassA &operator=(const ClassA &other)
+    {
+        if (this == &other)
+            return *this; // 自我赋值检查
+
+        delete bPtr;                    // 释放旧资源
+        bPtr = new ClassB(*other.bPtr); // 分配新资源
+        return *this;
+    }
+
+    ~ClassA()
+    {
+        delete bPtr;
+    }
+};
+
+int main()
+{
+    ClassA obj1(42);
+    ClassA obj2(100);
+
+    obj2 = obj1; // 调用赋值运算符
+
+    return 0;
+}
+```
+
 ### 区分前缀和后缀
 
 后缀采用 `int` 参数，编译器将传入 `0`。跟类无关，这个参数只是起标识作用，在函数内不使用。
