@@ -359,75 +359,6 @@ q++;     //ERROR
 
 ---
 
-## 运算符优先
-
-- `int *p[10]` ， `p` 先和 `[]` 结合， `p` 是一个数组，里面存了 10 个 `int` 类型指针
-- `int (*p)[10]` ，`p` 是一个指针，指向一个大小为 10 的 `int` 数组
-- `int *p(int)` ，是一个函数声明，函数名为 `p`，返回类型为 `int*` 类型，参数为 `int` 类型
-- `int (*p)(int)` ，是一个指向函数的指针，该函数返回类型为 `int` 类型，参数为 `int` 类型
-
----
-
-## 运算符重载
-
-我的理解就是运算符重载是为了方便，其实也可以不用运算符重载，而使用显式的函数调用，例如：
-
-`T Add(const T& addend) const { return this.data + addend.data; }`
-
-运算符重载有两种方式，一种是非成员函数重载，即使用友元函数形式；一种是成员函数重载。
-
-下列运算符只能通过成员函数进行重载：
-
-- `=`：赋值运算符
-- `( )`：函数调用运算符
-- `[ ]`：下标运算符
-- `->`：箭头运算符
-
-### 使用场景
-
-两个同类对象进行赋值（不是初始化，初始化是调用拷贝构造），会按成员复制，如果类成员包含指针，这时可以重载赋值运算符进行处理。
-
-### 区分前缀和后缀
-
-后缀采用 `int` 参数，编译器将传入 `0`。跟类无关，这个参数只是起标识作用，在函数内不使用。
-
-``` cpp
-class Integer(){
-public:
-    ...
-    const Integer& operator++();    //prefix++
-    const Integer operator++(int);  //postfix++
-    const Integer& operator--();    //prefix--
-    const Integer operator--(int);  //postfix--
-    ...
-}
-```
-
-``` cpp
-const Integer& Integer::operator++(){
-    *this += 1;
-    return *this;
-}
-
-const Integer Integer::operator++(int){
-    Integer old = *this; //用同类型对象初始化，触发拷贝构造
-    ++( *this );
-    return old;
-}
-```
-
-前置运算符理论上性能更好点，尤其是自定义数据类型。但如果没有涉及赋值行为，编译器**可能**会将后置优化成前置。
-
----
-
-## 函数对象
-
-如果一个类将 `()` 运算符重载为成员函数，这个类就称为函数对象类，这个类的对象就是函数对象。函数对象是一个对象，但是使用的形式看起来像函数调用，实际上也执行了函数调用，因而得名。大多时候可以被 `Lambda` 表达式代替。
-
-函数对象可以有成员变量，可以用来记录调用状态。
-
----
-
 ## 拷贝构造
 
 `T::T(const T&)`
@@ -521,6 +452,75 @@ public : Thing(int _foo, int _bar) : member1(), member2(){
 - [Non-static data member initializers - modern-cpp-features](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#non-static-data-member-initializers)
 - [Static Data Member Initialization](https://stackoverflow.com/questions/11300652/static-data-member-initialization)
 - [(Non) Static Data Members Initialization, from C++11 till C++20](https://www.cppstories.com/2015/02/non-static-data-members-initialization/)
+
+---
+
+## 运算符优先
+
+- `int *p[10]` ， `p` 先和 `[]` 结合， `p` 是一个数组，里面存了 10 个 `int` 类型指针
+- `int (*p)[10]` ，`p` 是一个指针，指向一个大小为 10 的 `int` 数组
+- `int *p(int)` ，是一个函数声明，函数名为 `p`，返回类型为 `int*` 类型，参数为 `int` 类型
+- `int (*p)(int)` ，是一个指向函数的指针，该函数返回类型为 `int` 类型，参数为 `int` 类型
+
+---
+
+## 运算符重载
+
+我的理解就是运算符重载是为了方便，其实也可以不用运算符重载，而使用显式的函数调用，例如：
+
+`U Add(const T& addend) const { return this.data + addend.data; }`
+
+运算符重载有两种方式，一种是非成员函数重载，即使用友元函数形式；一种是成员函数重载。
+
+下列运算符只能通过成员函数进行重载：
+
+- `=`：赋值运算符
+- `( )`：函数调用运算符
+- `[ ]`：下标运算符
+- `->`：箭头运算符
+
+### 使用场景
+
+两个同类对象进行赋值（不是初始化，初始化是调用拷贝构造），会按成员复制，如果类成员包含指针，这时可以重载赋值运算符进行处理。
+
+### 区分前缀和后缀
+
+后缀采用 `int` 参数，编译器将传入 `0`。跟类无关，这个参数只是起标识作用，在函数内不使用。
+
+``` cpp
+class Integer(){
+public:
+    ...
+    const Integer& operator++();    //prefix++
+    const Integer operator++(int);  //postfix++
+    const Integer& operator--();    //prefix--
+    const Integer operator--(int);  //postfix--
+    ...
+}
+```
+
+``` cpp
+const Integer& Integer::operator++(){
+    *this += 1;
+    return *this;
+}
+
+const Integer Integer::operator++(int){
+    Integer old = *this; //用同类型对象初始化，触发拷贝构造
+    ++( *this );
+    return old;
+}
+```
+
+前置运算符理论上性能更好点，尤其是自定义数据类型。但如果没有涉及赋值行为，编译器**可能**会将后置优化成前置。
+
+---
+
+## 函数对象
+
+如果一个类将 `()` 运算符重载为成员函数，这个类就称为函数对象类，这个类的对象就是函数对象。函数对象是一个对象，但是使用的形式看起来像函数调用，实际上也执行了函数调用，因而得名。大多时候可以被 `Lambda` 表达式代替。
+
+函数对象可以有成员变量，可以用来记录调用状态。
 
 ---
 
