@@ -920,20 +920,23 @@ C++ 接口是使用抽象类来实现的，差别在于：
 但是移除 `const` 属性后修改**常量**对象会导致未定义行为，因此只有在确定最终修改到的对象不是 `const` 时才应进行此操作。
 
 ```cpp
+#include <iostream>
+
 // const_cast < typename > (expression)
 
-int i = 10;
+int main()
+{
+    int i = 10;
 
-const int *a = &i;
-// *a = 11; // error: assignment of read-only location ‘* a’
-int *pa = const_cast<int *>(a);
-*pa = 12;   // ok: i = 12
+    const int *a = &i;
+    // *a = 11; // error: assignment of read-only location ‘* a’
+    *(const_cast<int *>(a)) = 12; // ok: i = 12
 
-const int j = 20;
+    const int j = 20;
 
-const int *b = &j; 
-int *pb = const_cast<int *>(b);
-*pb = 22;   // 未定义行为，j 可能仍为 20，因为编译器可能对 const 对象进行优化，假设其值不会改变
+    const int *b = &j;
+    *(const_cast<int *>(b)) = 22; // 未定义行为，j 可能仍为 20，因为编译器可能对 const 对象进行优化，假设其值不会改变
+}
 ```
 
 #### 使用场景
